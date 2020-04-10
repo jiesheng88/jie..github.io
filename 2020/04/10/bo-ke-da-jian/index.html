@@ -5,10 +5,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="博客搭建, Python, Rust, C++, Go, 爬虫, 深度学习, 服务研发, 对象存储">
-    <meta name="description" content="​    通过 GitHub + hexo 来搭建个人博客！！
+    <meta name="description" content="通过 GitHub + hexo 来搭建个人博客！！
 参考链接：
-​    1.超全面！如何用 GitHub 从零开始搭建一个博客 ？
-​            https://www.cxyxiaowu.com/6407.htm">
+1.超全面！如何用 GitHub 从零开始搭建一个博客 ？：https://www.cxyxiaowu.com/6407.html
+2.【新手向】从零开始搭建一个酷炫免费的个">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -389,6 +389,15 @@
                 </div>
                 <div class="col s5 right-align">
                     
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Markdown/" class="post-category" target="_blank">
+                                Markdown
+                            </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
 
@@ -411,12 +420,10 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>​    通过 GitHub + hexo 来搭建个人博客！！</p>
+                <p>通过 GitHub + hexo 来搭建个人博客！！</p>
 <p>参考链接：</p>
-<p>​    1.超全面！如何用 GitHub 从零开始搭建一个博客 ？</p>
-<p>​            <a href="https://www.cxyxiaowu.com/6407.html" target="_blank" rel="noopener">https://www.cxyxiaowu.com/6407.html</a></p>
-<p>​    2.【新手向】从零开始搭建一个酷炫免费的个人博客</p>
-<p>​            <a href="https://mp.weixin.qq.com/s?__biz=MzUyNjQxNjYyMg==&amp;mid=2247484589&amp;idx=1&amp;sn=7ef61ad418eb4b16d3587a5859f5ce8e&amp;chksm=fa0e6b2ccd79e23afc1767f07afeec6f3dd3de0be44be01c7548afd6476015b0c3d91528088c&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">https://mp.weixin.qq.com/s?__biz=MzUyNjQxNjYyMg==&amp;mid=2247484589&amp;idx=1&amp;sn=7ef61ad418eb4b16d3587a5859f5ce8e&amp;chksm=fa0e6b2ccd79e23afc1767f07afeec6f3dd3de0be44be01c7548afd6476015b0c3d91528088c&amp;scene=21#wechat_redirect</a></p>
+<p>1.超全面！如何用 GitHub 从零开始搭建一个博客 ？：<a href="https://www.cxyxiaowu.com/6407.html" target="_blank" rel="noopener">https://www.cxyxiaowu.com/6407.html</a></p>
+<p>2.【新手向】从零开始搭建一个酷炫免费的个人博客：<a href="https://mp.weixin.qq.com/s?__biz=MzUyNjQxNjYyMg==&amp;mid=2247484589&amp;idx=1&amp;sn=7ef61ad418eb4b16d3587a5859f5ce8e&amp;chksm=fa0e6b2ccd79e23afc1767f07afeec6f3dd3de0be44be01c7548afd6476015b0c3d91528088c&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">https://mp.weixin.qq.com/s?__biz=MzUyNjQxNjYyMg==&amp;mid=2247484589&amp;idx=1&amp;sn=7ef61ad418eb4b16d3587a5859f5ce8e&amp;chksm=fa0e6b2ccd79e23afc1767f07afeec6f3dd3de0be44be01c7548afd6476015b0c3d91528088c&amp;scene=21#wechat_redirect</a></p>
 <h2 id="一、GitHub创建个人仓库"><a href="#一、GitHub创建个人仓库" class="headerlink" title="一、GitHub创建个人仓库"></a>一、GitHub创建个人仓库</h2><p>​    1.登录到 GitHub：<a href="https://github.com/join?source=header-home" target="_blank" rel="noopener">https://github.com/join?source=header-home</a></p>
 <p>​    2.登录成功之后，点击 GitHub 中的 New repository 创建新仓库，仓库的名字可以随便起，不过这个仓库是作为我们的博客仓库的，所以尽量将名字以 {username}.github.io 的形式来起。</p>
 <p>​    比如，我的GitHub用户名是lewky，我就会把这个仓库命名为lewky.github.io。（为什么要这样起名，后面会说明）</p>
@@ -426,11 +433,13 @@
 <p>​    下载地址同样在上面的百度网盘里</p>
 <h4 id="2-2-1-Git配置"><a href="#2-2-1-Git配置" class="headerlink" title="2.2.1 Git配置"></a>2.2.1 Git配置</h4><p>​            <img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200410151626711.png" alt="image-20200410151626711" style="zoom: 67%;" /></p>
 <p>​    进入Git Bash终端进行如下操作，设置user.name 和 user.email 配置信息</p>
-<pre><code>git config --global user.name &quot;你的GitHub用户名&quot;
-git config --global user.email &quot;你的GitHub注册邮箱&quot;</code></pre><h4 id="2-2-2-SSH-key的创建与配置"><a href="#2-2-2-SSH-key的创建与配置" class="headerlink" title="2.2.2 SSH key的创建与配置"></a>2.2.2 SSH key的创建与配置</h4><p>​    最关键的一步来了，我们需要生成一对密钥对，然后将公钥配置到GitHub账号上。</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> config --global user.name <span class="token string">"你的GitHub用户名"</span>
+<span class="token function">git</span> config --global user.email <span class="token string">"你的GitHub注册邮箱"</span></code></pre>
+<h4 id="2-2-2-SSH-key的创建与配置"><a href="#2-2-2-SSH-key的创建与配置" class="headerlink" title="2.2.2 SSH key的创建与配置"></a>2.2.2 SSH key的创建与配置</h4><p>​    最关键的一步来了，我们需要生成一对密钥对，然后将公钥配置到GitHub账号上。</p>
 <p>​    <strong>1.生成RSA密钥对</strong></p>
 <p>​    通过注册的邮箱生成 ssh 密钥文件:</p>
-<pre><code>ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;</code></pre><p>​    然后直接三个回车即可，默认不需要设置密码。最后得到了两个文件：<code>id_rsa</code>和<code>id_rsa.pub</code>。</p>
+<pre class=" language-bash"><code class="language-bash">ssh-keygen -t rsa -C <span class="token string">"你的GitHub注册邮箱"</span></code></pre>
+<p>​    然后直接三个回车即可，默认不需要设置密码。最后得到了两个文件：<code>id_rsa</code>和<code>id_rsa.pub</code>。</p>
 <p>​    <strong>2.拷贝密钥</strong></p>
 <p>​    打开 <code>id_rsa.pub 文件</code>，将里面的内容全部复制。</p>
 <p><img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200410152745234.png" alt="image-20200410152745234"></p>
@@ -446,64 +455,77 @@ git config --global user.email &quot;你的GitHub注册邮箱&quot;</code></pre>
 <p><img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200410153702312.png" alt="image-20200410153702312"></p>
 <p>​    <strong>4.测试GitHub SSH</strong></p>
 <p>​        添加好 <code>SSH Key</code>后，进行测试。使用 Git Bash 输入：</p>
-<pre><code>ssh -T git@github.com</code></pre><p>​        你将会看到：</p>
-<pre><code>The authenticity of host &#39;github.com (207.97.227.239)&#39; can&#39;t be established.
+<pre class=" language-bash"><code class="language-bash"><span class="token function">ssh</span> -T git@github.com</code></pre>
+<p>​        你将会看到：</p>
+<pre class=" language-bash"><code class="language-bash">The authenticity of host <span class="token string">'github.com (207.97.227.239)'</span> can't be established.
 RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
-Are you sure you want to continue connecting (yes/no)?</code></pre><p>​        选择 <code>yes</code></p>
-<pre><code>Hi MisterBooo! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code></pre><p>​        <img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200410154105469.png" alt="image-20200410154105469"></p>
+Are you sure you want to <span class="token keyword">continue</span> connecting <span class="token punctuation">(</span>yes/no<span class="token punctuation">)</span>?</code></pre>
+<p>​        选择 <code>yes</code></p>
+<pre class=" language-bash"><code class="language-bash">Hi MisterBooo<span class="token operator">!</span> You've successfully authenticated, but GitHub does not provide shell access.</code></pre>
+<p>​        <img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200410154105469.png" alt="image-20200410154105469"></p>
 <p>​        如果看到<code>Hi</code>后面是你的用户名，就说明成功了。</p>
 <h3 id="2-3-Hexo安装"><a href="#2-3-Hexo安装" class="headerlink" title="2.3 Hexo安装"></a>2.3 Hexo安装</h3><p>​    Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
 <p>​    使用 Git Bash 输入：</p>
-<pre><code>npm install -g hexo-cli</code></pre><p>​    安装完毕之后，确保环境变量配置好，能正常使用 <code>hexo</code> 命令。</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g hexo-cli</code></pre>
+<p>​    安装完毕之后，确保环境变量配置好，能正常使用 <code>hexo</code> 命令。</p>
 <h2 id="三、通过hexo搭建博客"><a href="#三、通过hexo搭建博客" class="headerlink" title="三、通过hexo搭建博客"></a>三、通过hexo搭建博客</h2><h3 id="3-1初始化博客"><a href="#3-1初始化博客" class="headerlink" title="3.1初始化博客"></a>3.1初始化博客</h3><p>​    在你想创建博客的文件夹下（我是想把博客放在D:\Program Files文件夹下），点击鼠标右键，选择Git Bash Here，即可进入Git Bash 。</p>
 <img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200410155030466.png" alt="image-20200410155030466" style="zoom:50%;" />
 
 <p>​    使用 Git Bash 输入，其中myBlog是你要保存的博客文件夹的名称：</p>
-<pre><code>hexo init myBlog</code></pre><p>​    <img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200410155608097.png" alt="image-20200410155608097"></p>
+<pre class=" language-bash"><code class="language-bash">hexo init myBlog</code></pre>
+<p>​    <img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200410155608097.png" alt="image-20200410155608097"></p>
 <p>​    接下来，进入文件夹 <code>myBlog</code>,然后调用 Hexo 的 generate 命令，将 Hexo 编译生成 HTML 代码，命令如下：</p>
-<pre><code>hexo generate</code></pre><p>​    可以看到输出结果里面包含了 js、css、font 等内容，并发现他们都处在了项目根目录下的 public 文件夹下面了。</p>
+<pre class=" language-bash"><code class="language-bash">hexo generate</code></pre>
+<p>​    可以看到输出结果里面包含了 js、css、font 等内容，并发现他们都处在了项目根目录下的 public 文件夹下面了。</p>
 <p>​    然后我们利用 Hexo 提供的 serve 命令把博客在本地运行起来，命令如下：</p>
-<pre><code>hexo serve</code></pre><p><img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200410155704384.png" alt="image-20200410155704384"></p>
+<pre class=" language-bash"><code class="language-bash">hexo serve</code></pre>
+<p><img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200410155704384.png" alt="image-20200410155704384"></p>
 <p>​    然后，打开浏览器输入地址：</p>
-<pre><code>localhost:4000</code></pre><p>​    <img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200410160053650.png" alt="image-20200410160053650"></p>
+<pre class=" language-bash"><code class="language-bash">localhost:4000</code></pre>
+<p>​    <img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200410160053650.png" alt="image-20200410160053650"></p>
 <p>​    执行到这里事实上博客就已经搭建好了，接下来就是去完善它。</p>
 <p><strong>！！！注意：下面的命令都是在 <code>myBlog</code>文件里进行操作的。</strong></p>
 <h3 id="3-3-部署"><a href="#3-3-部署" class="headerlink" title="3.3 部署"></a>3.3 部署</h3><p>​    接下来我们来将这个初始化的博客进行一下部署，放到 GitHub Pages 上面验证一下其可用性。成功之后我们可以再进行后续的修改，比如修改主题、修改页面配置等等。</p>
 <p>​    那么怎么把这个页面部署到 GitHub Pages 上面呢，其实 Hexo 已经给我们提供一个命令，利用它我们可以直接将博客一键部署，不需要手动去配置服务器或进行其他的各项配置。</p>
 <p>​    在部署之前，我们需要先知道博客的部署地址，它需要对应 GitHub 的一个 Repository 的地址，这个信息需要我们来配置一下。</p>
 <p>​    打开myBlog文件夹下的 _config.yml 文件，找到 Deployment 这个地方：</p>
-<pre><code># Deployment
-## Docs: https://hexo.io/docs/deployment.html
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># Deployment</span>
+<span class="token comment" spellcheck="true">## Docs: https://hexo.io/docs/deployment.html</span>
 deploy:
-  type:</code></pre><p>​    把刚才新建的 Repository 的地址贴过来，然后指定分支为 master 分支，最终修改为如下内容：</p>
-<pre><code># Deployment
-## Docs: https://hexo.io/docs/deployment.html
+  type:</code></pre>
+<p>​    把刚才新建的 Repository 的地址贴过来，然后指定分支为 master 分支，最终修改为如下内容：</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># Deployment</span>
+<span class="token comment" spellcheck="true">## Docs: https://hexo.io/docs/deployment.html</span>
 deploy:
-  type: git
-  repo: git@github.com:/{user}/{repository}.git
-  branch: master</code></pre><p>​    <strong>请注意，这里的仓库地址如果写成：<code>https://github.com/{user}/{repository}.git</code>可能会在后边的部署时无法成功，需要将<code>https://github.com</code>改成<code>git@github.com:</code>。</strong></p>
+  type: <span class="token function">git</span>
+  repo: git@github.com:/<span class="token punctuation">{</span>user<span class="token punctuation">}</span>/<span class="token punctuation">{</span>repository<span class="token punctuation">}</span>.git
+  branch: master</code></pre>
+<p>​    <strong>请注意，这里的仓库地址如果写成：<code>https://github.com/{user}/{repository}.git</code>可能会在后边的部署时无法成功，需要将<code>https://github.com</code>改成<code>git@github.com:</code>。</strong></p>
 <p>​    我的就修改为如下内容：</p>
 <p><img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200410162701389.png" alt="image-20200410162701389"></p>
 <p>​    另外我们还需要额外安装一个支持 Git 的部署插件，名字叫做 hexo-deployer-git，有了它我们才可以顺利将其部署到 GitHub 上面，如果不安装的话，在执行部署命令时会报错。</p>
 <p>​    安装这个插件，在myBlog文件夹下执行安装命令如下：</p>
-<pre><code>npm install hexo-deployer-git --save</code></pre><p>​    安装成功之后，执行部署命令：</p>
-<pre><code>hexo deploy</code></pre><p>​    运行结果类似如下：</p>
-<pre><code>INFO  Deploying: git
-INFO  Clearing .deploy_git folder...
-INFO  Copying files from public folder...
-INFO  Copying files from extend dirs...
+<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git --save</code></pre>
+<p>​    安装成功之后，执行部署命令：</p>
+<pre class=" language-bash"><code class="language-bash">hexo deploy</code></pre>
+<p>​    运行结果类似如下：</p>
+<pre class=" language-bash"><code class="language-bash">INFO  Deploying: <span class="token function">git</span>
+INFO  Clearing .deploy_git folder<span class="token punctuation">..</span>.
+INFO  Copying files from public folder<span class="token punctuation">..</span>.
+INFO  Copying files from extend dirs<span class="token punctuation">..</span>.
 On branch master
 nothing to commit, working directory clean
 Counting objects: 46, done.
 Delta compression using up to 8 threads.
-Compressing objects: 100% (36/36), done.
-Writing objects: 100% (46/46), 507.66 KiB | 0 bytes/s, done.
-Total 46 (delta 3), reused 0 (delta 0)
-remote: Resolving deltas: 100% (3/3), done.
+Compressing objects: 100% <span class="token punctuation">(</span>36/36<span class="token punctuation">)</span>, done.
+Writing objects: 100% <span class="token punctuation">(</span>46/46<span class="token punctuation">)</span>, 507.66 KiB <span class="token operator">|</span> 0 bytes/s, done.
+Total 46 <span class="token punctuation">(</span>delta 3<span class="token punctuation">)</span>, reused 0 <span class="token punctuation">(</span>delta 0<span class="token punctuation">)</span>
+remote: Resolving deltas: 100% <span class="token punctuation">(</span>3/3<span class="token punctuation">)</span>, done.
 To git@github.com:NightTeam/nightteam.github.io.git
- * [new branch]      HEAD -&gt; master
-Branch master set up to track remote branch master from git@github.com:NightTeam/nightteam.github.io.git.
-INFO  Deploy done: git</code></pre><p>​    如果出现类似上面的内容，就证明我们的博客已经成功部署到 GitHub Pages 上面了。</p>
+ * <span class="token punctuation">[</span>new branch<span class="token punctuation">]</span>      HEAD -<span class="token operator">></span> master
+Branch master <span class="token keyword">set</span> up to track remote branch master from git@github.com:NightTeam/nightteam.github.io.git.
+INFO  Deploy done: <span class="token function">git</span></code></pre>
+<p>​    如果出现类似上面的内容，就证明我们的博客已经成功部署到 GitHub Pages 上面了。</p>
 <p>​    通过如下图所示的Settings 进入该仓库的设置页面，找到 Github Pages 这一项，选择以 Master 分支作为 source，然后保存；接下来这个仓库就会被部署到 https://{username}.github.io/{仓库名}。</p>
 <p><img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200410163524556.png" alt="image-20200410163524556"></p>
 <p>​    如果你希望直接通过 https://{username}.github.io/ 来访问你的博客，可以将仓库名改为 {username}.github.io；这样就不需要在url后边添加上仓库名来访问了。</p>
@@ -513,12 +535,13 @@ INFO  Deploy done: git</code></pre><p>​    如果出现类似上面的内容�
 <p>​    GitHub 的 master 分支实际上是博客文件夹下面的 public 文件夹下的所有内容，Hexo 把编译之后的静态页面内容上传到 GitHub 的 master 分支上面去了。</p>
 <p>​    如果我博客的源码也想放到 GitHub 上面怎么办呢？其实很简单，新建一个其他的分支就好了，比如我这边就新建了一个 source 分支，代表博客源码的意思。</p>
 <p>​    具体的添加过程就很简单了，在Git Bash里逐条添加如下命令：</p>
-<pre><code>git init
-git checkout -b source
-git add -A
-git commit -m &quot;init blog&quot;
-git remote add origin git@github.com:{username}/{username}.github.io.git
-git push origin source</code></pre><p>​    成功之后，可以到 GitHub 上再切换下默认分支，比如我就把默认的分支设置为了 source，当然不换也可以。</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> init
+<span class="token function">git</span> checkout -b <span class="token function">source</span>
+<span class="token function">git</span> add -A
+<span class="token function">git</span> commit -m <span class="token string">"init blog"</span>
+<span class="token function">git</span> remote add origin git@github.com:<span class="token punctuation">{</span>username<span class="token punctuation">}</span>/<span class="token punctuation">{</span>username<span class="token punctuation">}</span>.github.io.git
+<span class="token function">git</span> push origin <span class="token function">source</span></code></pre>
+<p>​    成功之后，可以到 GitHub 上再切换下默认分支，比如我就把默认的分支设置为了 source，当然不换也可以。</p>
 <h3 id="3-3-更换Hexo博客主题"><a href="#3-3-更换Hexo博客主题" class="headerlink" title="3.3 更换Hexo博客主题"></a>3.3 更换Hexo博客主题</h3><p>​    hexo 默认的主题可能显得有点呆板，你可以在 <a href="https://hexo.io/themes/index.html进行主题的挑选更换。将下好的主题安放在`themes`文件夹内，同时在`_config.yml`中进行主题修改就好了。" target="_blank" rel="noopener">https://hexo.io/themes/index.html进行主题的挑选更换。将下好的主题安放在`themes`文件夹内，同时在`_config.yml`中进行主题修改就好了。</a></p>
 <img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200410165053440.png" alt="image-20200410165053440" style="zoom:67%;" />
 
@@ -529,9 +552,9 @@ git push origin source</code></pre><p>​    成功之后，可以到 GitHub 上
 
 <h4 id="3-4-1-直接导入文章"><a href="#3-4-1-直接导入文章" class="headerlink" title="3.4.1 直接导入文章"></a>3.4.1 直接导入文章</h4><p>​    你可以将你平时写的文章直接导入到 <code>_posts</code> 文件夹里，注意文章类型得是 <code>md</code>格式。</p>
 <p>​    <strong>！！在文章开头通过如下格式添加必要信息：</strong></p>
-<pre><code>---
-title: 标题 # 自动创建，如 hello-world
-date: 日期 # 自动创建，如 2019-09-22 01:47:21
+<pre class=" language-bash"><code class="language-bash">---
+title: 标题 <span class="token comment" spellcheck="true"># 自动创建，如 hello-world</span>
+date: 日期 <span class="token comment" spellcheck="true"># 自动创建，如 2019-09-22 01:47:21</span>
 tags: 
 - 标签1
 - 标签2
@@ -539,8 +562,10 @@ tags:
 categories:
 - 分类1
 - 分类2
----</code></pre><h4 id="3-4-2-写新文章"><a href="#3-4-2-写新文章" class="headerlink" title="3.4.2 写新文章"></a>3.4.2 写新文章</h4><p>​    你可以执行下列命令来创建一篇新文章。</p>
-<pre><code>hexo new [layout] &lt;title&gt;</code></pre><p>​    你可以在命令中指定文章的布局（layout），默认为 <code>post</code>，可以通过修改 <code>_config.yml</code> 中的 <code>default_layout</code> 参数来指定默认布局。</p>
+---</code></pre>
+<h4 id="3-4-2-写新文章"><a href="#3-4-2-写新文章" class="headerlink" title="3.4.2 写新文章"></a>3.4.2 写新文章</h4><p>​    你可以执行下列命令来创建一篇新文章。</p>
+<pre class=" language-bash"><code class="language-bash">hexo new <span class="token punctuation">[</span>layout<span class="token punctuation">]</span> <span class="token operator">&lt;</span>title<span class="token operator">></span></code></pre>
+<p>​    你可以在命令中指定文章的布局（layout），默认为 <code>post</code>，可以通过修改 <code>_config.yml</code> 中的 <code>default_layout</code> 参数来指定默认布局。</p>
 <p><img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200410160641123.png" alt="image-20200410160641123"></p>
 <p>​    这样在 <code>_posts</code> 文件夹里也生成了一篇新的文章。</p>
 <img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200410160701789.png" alt="image-20200410160701789" style="zoom:67%;" />
@@ -548,10 +573,12 @@ categories:
 <h4 id="3-4-3-Markdown-写作"><a href="#3-4-3-Markdown-写作" class="headerlink" title="3.4.3 Markdown 写作"></a>3.4.3 <strong>Markdown 写作</strong></h4><p>​    Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>
 <p>​    这里推荐 Typora 这款 Markdown 写作软件。Typora 是一款免费的 MD 编辑器，它是优雅简洁与强大开放的完美结合体。官网直达 <a href="https://typora.io" target="_blank" rel="noopener">https://typora.io</a></p>
 <h2 id="四、部署脚本"><a href="#四、部署脚本" class="headerlink" title="四、部署脚本"></a>四、部署脚本</h2><p>​    最后我这边还增加了一个简易版的部署脚本，其实就是重新 gererate 下文件，然后重新部署。在根目录下新建一个 deploy.sh 的脚本文件，内容如下：</p>
-<pre><code>hexo clean
+<pre class=" language-bash"><code class="language-bash">hexo clean
 hexo generate
-hexo deploy</code></pre><p>​    这样我们在部署发布的时候只需要执行：</p>
-<pre><code>sh deploy.sh</code></pre><p>​    就可以完成博客的更新了，非常简单。</p>
+hexo deploy</code></pre>
+<p>​    这样我们在部署发布的时候只需要执行：</p>
+<pre class=" language-bash"><code class="language-bash">sh deploy.sh</code></pre>
+<p>​    就可以完成博客的更新了，非常简单。</p>
 
             </div>
             <hr/>
@@ -728,18 +755,22 @@ hexo deploy</code></pre><p>​    这样我们在部署发布的时候只需要�
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">​    通过 GitHub + hexo 来搭建个人博客！！
+                    <div class="summary">通过 GitHub + hexo 来搭建个人博客！！
 参考链接：
-​    1.超全面！如何用 GitHub 从零开始搭建一个博客 ？
-​            https://www.cxyxiaowu.com/6407.htm</div>
+1.超全面！如何用 GitHub 从零开始搭建一个博客 ？：https://www.cxyxiaowu.com/6407.html
+2.【新手向】从零开始搭建一个酷炫免费的个</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2020-04-10
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fa fa-user fa-fw"></i>
-                            Jie
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Markdown/" class="post-category" target="_blank">
+                                    Markdown
+                                </a>
+                            
                             
                         </span>
                     </div>
