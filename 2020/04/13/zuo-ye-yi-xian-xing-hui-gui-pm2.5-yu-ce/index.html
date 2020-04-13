@@ -7,7 +7,7 @@
     <meta name="keywords" content="【作业一】线性回归-PM2.5预测, Python, Rust, C++, Go, 爬虫, 深度学习, 服务研发, 对象存储">
     <meta name="description" content="一、数据获取​    给定训练集train.csv，要求根据前9个小时的空气监测情况预测第10个小时的PM2.5含量。
 训练集介绍：
-　　(1) CSV文件，包含台湾丰原地区240天的气象观测资料(取每个月前20天的数据做训练集，12月X2">
+​        (1) CSV文件，包含台湾丰原地区240天的气象观测资料(取每个月前20天的数据做训练">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -433,13 +433,13 @@
             <div id="articleContent">
                 <h2 id="一、数据获取"><a href="#一、数据获取" class="headerlink" title="一、数据获取"></a>一、数据获取</h2><p>​    给定训练集train.csv，要求根据前9个小时的空气监测情况预测第10个小时的PM2.5含量。</p>
 <p>训练集介绍：</p>
-<p>　　(1) CSV文件，包含台湾丰原地区240天的气象观测资料(取每个月前20天的数据做训练集，12月X20天=240天，每月后10天数据用于测试);</p>
+<p>​        (1) CSV文件，包含台湾丰原地区240天的气象观测资料(取每个月前20天的数据做训练集，12月X20天=240天，每月后10天数据用于测试，对学生不可见);</p>
 <p>　　(2) 每天的监测时间点为0时，1时……到23时，共24个时间节点;</p>
 <p>　　(3) 每天的检测指标包括CO、NO、PM2.5、PM10等气体浓度，是否降雨、刮风等气象信息，共计18项；</p>
-<p>​        (4) 数据下载地址：<a href="https://pan.baidu.com/s/17mJnAGLtRadHtdZLX1k43A" target="_blank" rel="noopener">https://pan.baidu.com/s/17mJnAGLtRadHtdZLX1k43A</a> </p>
+<p>　　(4) 数据下载地址：<a href="https://pan.baidu.com/s/17mJnAGLtRadHtdZLX1k43A" target="_blank" rel="noopener">https://pan.baidu.com/s/17mJnAGLtRadHtdZLX1k43A</a> </p>
 <p>​    提取码：vcj8</p>
-<p><img src="../images/%E3%80%90%E4%BD%9C%E4%B8%9A%E4%B8%80%E3%80%91%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92-PM2.5%E9%A2%84%E6%B5%8B/image-20200413153133242.png" alt="train.csv文件内容"></p>
-<p><img src="../images/%E3%80%90%E4%BD%9C%E4%B8%9A%E4%B8%80%E3%80%91%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92-PM2.5%E9%A2%84%E6%B5%8B/image-20200413153302263.png" alt="test.csv文件部分内容"></p>
+<p><img src="/images/%E3%80%90%E4%BD%9C%E4%B8%9A%E4%B8%80%E3%80%91%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92-PM2.5%E9%A2%84%E6%B5%8B/image-20200413153133242.png" alt="train.csv文件内容"></p>
+<p><img src="/images/%E3%80%90%E4%BD%9C%E4%B8%9A%E4%B8%80%E3%80%91%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92-PM2.5%E9%A2%84%E6%B5%8B/image-20200413153302263.png" alt="test.csv文件部分内容"></p>
 <h2 id="二、程序实现"><a href="#二、程序实现" class="headerlink" title="二、程序实现"></a>二、程序实现</h2><h3 id="2-1-加载CSV文件"><a href="#2-1-加载CSV文件" class="headerlink" title="2.1 加载CSV文件"></a>2.1 加载CSV文件</h3><pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">load_csv</span><span class="token punctuation">(</span>train_path<span class="token punctuation">)</span><span class="token punctuation">:</span>
     data <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span>train_path<span class="token punctuation">,</span> usecols<span class="token operator">=</span>range<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">27</span><span class="token punctuation">)</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">'big5'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># usecols=range(3,27)：表示选择第3列到第27列数据</span>
 <span class="token comment" spellcheck="true">#     pf = pd.read_csv(path, encoding='big5')</span>
@@ -540,7 +540,7 @@
         <span class="token comment" spellcheck="true"># 梯度更新</span>
         w <span class="token operator">-=</span> learning_rate <span class="token operator">*</span> w_gradient <span class="token operator">/</span> np<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span>w_adagrad <span class="token operator">+</span> eps<span class="token punctuation">)</span>
     <span class="token keyword">return</span> w</code></pre>
-<p><img src="../images/%E3%80%90%E4%BD%9C%E4%B8%9A%E4%B8%80%E3%80%91%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92-PM2.5%E9%A2%84%E6%B5%8B/image-20200413161334114.png" alt="训练结果"></p>
+<p><img src="/images/%E3%80%90%E4%BD%9C%E4%B8%9A%E4%B8%80%E3%80%91%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92-PM2.5%E9%A2%84%E6%B5%8B/image-20200413161334114.png" alt="训练结果"></p>
 <h3 id="2-5-测试"><a href="#2-5-测试" class="headerlink" title="2.5 测试"></a>2.5 测试</h3><pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">test</span><span class="token punctuation">(</span>test_path<span class="token punctuation">,</span> std_x<span class="token punctuation">,</span> mean_x<span class="token punctuation">)</span><span class="token punctuation">:</span>
     pf <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span>test_path<span class="token punctuation">,</span> header <span class="token operator">=</span> None<span class="token punctuation">,</span> encoding <span class="token operator">=</span> <span class="token string">'big5'</span><span class="token punctuation">)</span>
     data <span class="token operator">=</span> pf<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
@@ -723,7 +723,7 @@
 <span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
     main<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 <p>​    保存的submit.csv文件部分内容如下:</p>
-<p><img src="../images/%E3%80%90%E4%BD%9C%E4%B8%9A%E4%B8%80%E3%80%91%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92-PM2.5%E9%A2%84%E6%B5%8B/image-20200413173310799.png" alt="submit.csv文件部分内容"></p>
+<p><img src="/images/%E3%80%90%E4%BD%9C%E4%B8%9A%E4%B8%80%E3%80%91%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92-PM2.5%E9%A2%84%E6%B5%8B/image-20200413173310799.png" alt="submit.csv文件部分内容"></p>
 
             </div>
             <hr/>
@@ -902,7 +902,7 @@
                 <div class="card-content article-content">
                     <div class="summary">一、数据获取​    给定训练集train.csv，要求根据前9个小时的空气监测情况预测第10个小时的PM2.5含量。
 训练集介绍：
-　　(1) CSV文件，包含台湾丰原地区240天的气象观测资料(取每个月前20天的数据做训练集，12月X2</div>
+​        (1) CSV文件，包含台湾丰原地区240天的气象观测资料(取每个月前20天的数据做训练</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2020-04-13
@@ -966,11 +966,23 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fa fa-user fa-fw"></i>
-                            Jie
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category" target="_blank">
+                                    博客
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" target="_blank">
+                        <span class="chip bg-color">博客搭建</span>
+                    </a>
+                    
                 </div>
                 
             </div>
