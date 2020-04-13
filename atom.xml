@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://jiesheng88.github.io/"/>
-  <updated>2020-04-10T14:01:20.970Z</updated>
+  <updated>2020-04-13T09:46:03.107Z</updated>
   <id>http://jiesheng88.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【作业一】线性回归-PM2.5预测</title>
+    <link href="http://jiesheng88.github.io/2020/04/13/zuo-ye-yi-xian-xing-hui-gui-pm2.5-yu-ce/"/>
+    <id>http://jiesheng88.github.io/2020/04/13/zuo-ye-yi-xian-xing-hui-gui-pm2.5-yu-ce/</id>
+    <published>2020-04-13T07:14:23.000Z</published>
+    <updated>2020-04-13T09:46:03.107Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一、数据获取&quot;&gt;&lt;a href=&quot;#一、数据获取&quot; class=&quot;headerlink&quot; title=&quot;一、数据获取&quot;&gt;&lt;/a&gt;一、数据获取&lt;/h2&gt;&lt;p&gt;​   
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Markdown" scheme="http://jiesheng88.github.io/categories/Markdown/"/>
+    
+    
+      <category term="机器学习" scheme="http://jiesheng88.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="线性回归" scheme="http://jiesheng88.github.io/tags/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/"/>
+    
+      <category term="PM2.5预测" scheme="http://jiesheng88.github.io/tags/PM2-5%E9%A2%84%E6%B5%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>博客搭建</title>
