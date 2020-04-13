@@ -452,9 +452,9 @@
 <span class="token comment" spellcheck="true">#     pf = pd.read_csv(path, encoding='big5')</span>
 <span class="token comment" spellcheck="true">#     data = pf.iloc[:, 3:]  # 另一种选择数据的方法</span>
     <span class="token keyword">return</span> data</code></pre>
-<h3 id="2-2-数据预处理"><a href="#2-2-数据预处理" class="headerlink" title="2.2 数据预处理"></a>2.2 数据预处理</h3><p>浏览数据可知，数据中存在一定量的空数据NR，且多存在于RAINFALL一项。对于空数据，常规的处理方法无非就是删除法和补全法两种。查阅资料后发现，RAINFALL表示当天对应时间点是否降雨，有降雨值为1，无降雨值为NR，类似于布尔变量。因此可以采用补全法处理空数据：将空数据NR全部补为0即可。</p>
-<p>根据作业要求可知，需要用到连续9个时间点的气象观测数据，来预测第10个时间点的PM2.5含量。针对每一天来说，其包含的信息维度为(18,24)(18项指标，24个时间节点)。可以将0到8时的数据截取出来，形成一个维度为(18,9)的数据帧，作为训练数据，将9时的PM2.5含量取出来，作为该训练数据对应的label；同理可取1到9时的数据作为训练用的数据帧，10时的PM2.5含量作为label……以此分割，可将每天的信息分割为15个shape为(18,9)的数据帧和与之对应的15个label。</p>
-<p>训练集中共包含240天的数据，因此共可获得240X15=3600个数据帧和与之对应的3600个label。</p>
+<h3 id="2-2-数据预处理"><a href="#2-2-数据预处理" class="headerlink" title="2.2 数据预处理"></a>2.2 数据预处理</h3><p>&emsp;&emsp;浏览数据可知，数据中存在一定量的空数据NR，且多存在于RAINFALL一项。对于空数据，常规的处理方法无非就是删除法和补全法两种。查阅资料后发现，RAINFALL表示当天对应时间点是否降雨，有降雨值为1，无降雨值为NR，类似于布尔变量。因此可以采用补全法处理空数据：将空数据NR全部补为0即可。</p>
+<p>&emsp;&emsp;根据作业要求可知，需要用到连续9个时间点的气象观测数据，来预测第10个时间点的PM2.5含量。针对每一天来说，其包含的信息维度为(18,24)(18项指标，24个时间节点)。可以将0到8时的数据截取出来，形成一个维度为(18,9)的数据帧，作为训练数据，将9时的PM2.5含量取出来，作为该训练数据对应的label；同理可取1到9时的数据作为训练用的数据帧，10时的PM2.5含量作为label……以此分割，可将每天的信息分割为15个shape为(18,9)的数据帧和与之对应的15个label。</p>
+<p>&emsp;&emsp;训练集中共包含240天的数据，因此共可获得240X15=3600个数据帧和与之对应的3600个label。</p>
 <pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">dataprocess</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token comment" spellcheck="true"># 将空数据NR替换为0</span>
     data <span class="token operator">=</span> data<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'NR'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">0.0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># data ----> [4320, 24]</span>
@@ -497,7 +497,7 @@
 <span class="token comment" spellcheck="true">#     y_validation = y[int(len(y)*0.8)]</span>
 
     <span class="token keyword">return</span> x<span class="token punctuation">,</span>y</code></pre>
-<p>第二种训练集数据划分：在从csv文件中提取数据帧和label时，第一种方法是以天为单位，每天分割出15个数据帧和15个label。事实上，时间是连续的，可以将每月的20天首尾连接，再从其中分割数据帧和label，可使数据帧样本数量大大提升。</p>
+<p>&emsp;&emsp;第二种训练集数据划分：在从csv文件中提取数据帧和label时，第一种方法是以天为单位，每天分割出15个数据帧和15个label。事实上，时间是连续的，可以将每月的20天首尾连接，再从其中分割数据帧和label，可使数据帧样本数量大大提升。</p>
 <pre class=" language-python"><code class="language-python">     x_list<span class="token punctuation">,</span> y_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
     <span class="token comment" spellcheck="true"># 將原始 4320 * 24 的数据依照每个月分成 12个18 (features) * 480 (hours) 的数据。 </span>
      month_data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
@@ -729,7 +729,7 @@
 
 <span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
     main<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
-<p>保存的submit.csv文件部分内容如下:</p>
+<p>&emsp;&emsp;保存的submit.csv文件部分内容如下:</p>
 <p><img src="/images/%E3%80%90%E4%BD%9C%E4%B8%9A%E4%B8%80%E3%80%91%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92-PM2.5%E9%A2%84%E6%B5%8B/image-20200413173310799.png" alt="submit.csv文件部分内容"></p>
 
             </div>
@@ -964,10 +964,10 @@
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">​    通过 GitHub + hexo 来搭建个人博客！！
+                    <div class="summary">&emsp;通过 GitHub + hexo 来搭建个人博客！！
 参考链接：
-​    1.超全面！如何用 GitHub 从零开始搭建一个博客 ？
-​                https://www.cxyxiaowu.com/6407</div>
+&emsp;1.超全面！如何用 GitHub 从零开始搭建一个博客 ？
+&emsp;&emsp;https://www.cxyxiaowu.com/6407.ht</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2020-04-10
