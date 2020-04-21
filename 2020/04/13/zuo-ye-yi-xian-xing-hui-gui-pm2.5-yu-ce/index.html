@@ -498,6 +498,8 @@
 
     <span class="token keyword">return</span> x<span class="token punctuation">,</span>y</code></pre>
 <p>&emsp;&emsp;第二种训练集数据划分：在从csv文件中提取数据帧和label时，第一种方法是以天为单位，每天分割出15个数据帧和15个label。事实上，时间是连续的，可以将每月的20天首尾连接，再从其中分割数据帧和label，可使数据帧样本数量大大提升。</p>
+<p><img src="/images/%E3%80%90%E4%BD%9C%E4%B8%9A%E4%B8%80%E3%80%91%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92-PM2.5%E9%A2%84%E6%B5%8B/20200410145553875.png" alt="提取特征"></p>
+<p><img src="/images/%E3%80%90%E4%BD%9C%E4%B8%9A%E4%B8%80%E3%80%91%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92-PM2.5%E9%A2%84%E6%B5%8B/20200410150256239.png" alt="提取特征"></p>
 <pre class=" language-python"><code class="language-python">     x_list<span class="token punctuation">,</span> y_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
     <span class="token comment" spellcheck="true"># 將原始 4320 * 24 的数据依照每个月分成 12个18 (features) * 480 (hours) 的数据。 </span>
      month_data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
@@ -515,7 +517,8 @@
              y_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span>label<span class="token punctuation">)</span>
          x <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>x_list<span class="token punctuation">)</span><span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token operator">*</span><span class="token number">9</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># x ----> [5652, 162]</span>
          y <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>y_list<span class="token punctuation">)</span><span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span>      <span class="token comment" spellcheck="true"># y ----> [5652, 1]</span></code></pre>
-<h3 id="2-3-标准化"><a href="#2-3-标准化" class="headerlink" title="2.3 标准化"></a>2.3 标准化</h3><pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">normalize</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<h3 id="2-3-标准化"><a href="#2-3-标准化" class="headerlink" title="2.3 标准化"></a>2.3 标准化</h3><p><img src="/images/%E3%80%90%E4%BD%9C%E4%B8%9A%E4%B8%80%E3%80%91%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92-PM2.5%E9%A2%84%E6%B5%8B/image-20200419210629193.png" alt="标准化两种形式"></p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">normalize</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
     mean_x <span class="token operator">=</span> np<span class="token punctuation">.</span>mean<span class="token punctuation">(</span>x<span class="token punctuation">,</span> axis <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#18 * 9 </span>
     std_x <span class="token operator">=</span> np<span class="token punctuation">.</span>std<span class="token punctuation">(</span>x<span class="token punctuation">,</span> axis <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#18 * 9 </span>
     <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>len<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true">#12 * 471</span>
@@ -892,55 +895,47 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/04/13/zuo-ye-yi-xian-xing-hui-gui-pm2.5-yu-ce/">
+                <a href="/2020/04/15/shu-ju-jie-gou-shu-zu-shu-zu-ji-qiao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="【作业一】线性回归-PM2.5预测">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="【数据结构-数组】如何高效对有序数组/链表去重？">
                         
-                        <span class="card-title">【作业一】线性回归-PM2.5预测</span>
+                        <span class="card-title">【数据结构-数组】如何高效对有序数组/链表去重？</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">一、作业说明及数据获取给定训练集train.csv，要求根据前9个小时的空气监测情况预测第10个小时的PM2.5含量。
-训练集介绍：
-
-(1) CSV文件，包含台湾丰原地区240天的气象观测资料(取每个月前20天的数据做训练集，12月X20</div>
+                    <div class="summary">1.数组简介&emsp;&emsp;数组，将元素存储到内存的连续位置中，是最基本的数据结构。在任何和编程相关的面试中，都会被问到和数组相关的问题，可以说是非常热门的考题之一。比如：将数组反转、对数组进行排序、搜索数组中的元素等。
+2.数组优</div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-04-13
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-04-15
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category" target="_blank">
-                                    机器学习
+                            <a href="/categories/%E6%95%B0%E7%BB%84/" class="post-category" target="_blank">
+                                    数组
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" target="_blank">
-                        <span class="chip bg-color">机器学习</span>
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" target="_blank">
+                        <span class="chip bg-color">数据结构</span>
                     </a>
                     
-                    <a href="/tags/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/" target="_blank">
-                        <span class="chip bg-color">线性回归</span>
-                    </a>
-                    
-                    <a href="/tags/PM2-5%E9%A2%84%E6%B5%8B/" target="_blank">
-                        <span class="chip bg-color">PM2.5预测</span>
+                    <a href="/tags/%E6%95%B0%E7%BB%84/" target="_blank">
+                        <span class="chip bg-color">数组</span>
                     </a>
                     
                 </div>
