@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://jiesheng88.github.io/"/>
-  <updated>2020-04-21T07:48:45.866Z</updated>
+  <updated>2020-04-22T13:59:00.034Z</updated>
   <id>http://jiesheng88.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【作业二】逻辑回归-收入分类</title>
+    <link href="http://jiesheng88.github.io/2020/04/22/zuo-ye-er-luo-ji-hui-gui-shou-ru-fen-lei/"/>
+    <id>http://jiesheng88.github.io/2020/04/22/zuo-ye-er-luo-ji-hui-gui-shou-ru-fen-lei/</id>
+    <published>2020-04-22T13:05:07.000Z</published>
+    <updated>2020-04-22T13:59:00.034Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一、作业要求&quot;&gt;&lt;a href=&quot;#一、作业要求&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="http://jiesheng88.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="机器学习" scheme="http://jiesheng88.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="逻辑回归" scheme="http://jiesheng88.github.io/tags/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/"/>
+    
+      <category term="概率生成模型" scheme="http://jiesheng88.github.io/tags/%E6%A6%82%E7%8E%87%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>【数据结构-二分法】二分搜索法</title>
