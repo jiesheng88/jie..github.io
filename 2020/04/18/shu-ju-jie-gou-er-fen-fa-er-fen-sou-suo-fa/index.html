@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="【数据结构-二分法】二分搜索法, Python, Rust, C++, Go, 爬虫, 深度学习, 服务研发, 对象存储">
+    <meta name="keywords" content="【数据结构-二分法】二分搜索法, Java,Python,C,C++, Java开发, 深度学习, 服务研发">
     <meta name="description" content="1.二分搜索法定义&amp;emsp;&amp;emsp;二分查找（英语：binary search），也称折半搜索（英语：half-interval search）、对数搜索（英语：logarithmic search），是一种在有序数组中查找某一特定元">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -122,7 +122,7 @@
         <div class="logo-name">橙墟园A杰</div>
         <div class="logo-desc">
             
-            涉猎的主要编程语言为 Python、Rust、C++、Go，领域涵盖爬虫、深度学习、服务研发和对象存储等。
+            涉猎的主要编程语言为 Java、Python、C、C++，领域涵盖Java开发、深度学习、服务开发等。
             
         </div>
     </div>
@@ -587,6 +587,96 @@
 <blockquote>
 <p><font color=#FF0000 ><strong>虽说是两个模板，区别在于选中位数，中位数根据分支逻辑来选，原则是区间要收缩，且不出现死循环，退出循环的时候，视情况，有可能需要对最后剩下的数单独做判断</strong>。</font></p>
 </blockquote>
+<h4 id="4-4-递归代码模板"><a href="#4-4-递归代码模板" class="headerlink" title="4.4 递归代码模板"></a>4.4 递归代码模板</h4><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 二分搜索函数的定义里，除了要指定数组 nums 和目标查找数 target 之外，还要指定查找区间的起点和终点位置，分别用 low 和 high 去表示。</span>
+<span class="token keyword">int</span> <span class="token function">binarySearch</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">,</span> <span class="token keyword">int</span> low<span class="token punctuation">,</span> <span class="token keyword">int</span> high<span class="token punctuation">)</span> <span class="token punctuation">{</span>        
+    <span class="token comment" spellcheck="true">// 为了避免无限循环，先判断，如果起点位置大于终点位置，表明这是一个非法的区间，已经尝试了所有的搜索区间还是没能找到结果，返回 -1。 </span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>low <span class="token operator">></span> high<span class="token punctuation">)</span> <span class="token punctuation">{</span>        
+        <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>    
+    <span class="token punctuation">}</span>  
+
+    <span class="token comment" spellcheck="true">// 取正中间那个数的下标 middle。    </span>
+    <span class="token keyword">int</span> middle <span class="token operator">=</span> low <span class="token operator">+</span> <span class="token punctuation">(</span>high <span class="token operator">-</span> low<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>  
+
+    <span class="token comment" spellcheck="true">// 判断一下正中间的那个数是不是要找的目标数 target，是，就返回下标 middle。        </span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>middle<span class="token punctuation">]</span> <span class="token operator">==</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>        
+        <span class="token keyword">return</span> middle<span class="token punctuation">;</span>    
+    <span class="token punctuation">}</span>        
+
+    <span class="token comment" spellcheck="true">// 如果发现目标数在左边，就递归地从左半边进行二分搜索。    </span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>target <span class="token operator">&lt;</span> nums<span class="token punctuation">[</span>middle<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>        
+        <span class="token keyword">return</span> <span class="token function">binarySearch</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> target<span class="token punctuation">,</span> low<span class="token punctuation">,</span> middle <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>        
+        <span class="token keyword">return</span> <span class="token function">binarySearch</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> target<span class="token punctuation">,</span> middle <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> high<span class="token punctuation">)</span><span class="token punctuation">;</span>    
+    <span class="token punctuation">}</span><span class="token comment" spellcheck="true">//否则从右半边递归地进行二分搜索。}</span></code></pre>
+<h4 id="4-5-非递归代码模板"><a href="#4-5-非递归代码模板" class="headerlink" title="4.5 非递归代码模板"></a>4.5 非递归代码模板</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> <span class="token function">binarySearch</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">,</span> <span class="token keyword">int</span> low<span class="token punctuation">,</span> <span class="token keyword">int</span> high<span class="token punctuation">)</span> <span class="token punctuation">{</span>    
+
+    <span class="token comment" spellcheck="true">// 在 while 循环里，判断搜索的区间范围是否有效    </span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>low <span class="token operator">&lt;=</span> high<span class="token punctuation">)</span> <span class="token punctuation">{</span>        
+        <span class="token comment" spellcheck="true">// 计算正中间的数的下标        </span>
+        <span class="token keyword">int</span> middle <span class="token operator">=</span> low <span class="token operator">+</span> <span class="token punctuation">(</span>high <span class="token operator">-</span> low<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>        
+
+        <span class="token comment" spellcheck="true">// 判断正中间的那个数是不是要找的目标数 target。如果是，就返回下标 middle    </span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>middle<span class="token punctuation">]</span> <span class="token operator">==</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>        
+            <span class="token keyword">return</span> middle<span class="token punctuation">;</span>    
+        <span class="token punctuation">}</span>        
+
+        <span class="token comment" spellcheck="true">// 如果发现目标数在左边，调整搜索区间的终点为 middle - 1；否则，调整搜索区间的起点为 middle + 1    </span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>target <span class="token operator">&lt;</span> nums<span class="token punctuation">[</span>middle<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>       
+            high <span class="token operator">=</span> middle <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>     
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>        
+            low <span class="token operator">=</span> middle <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>     
+        <span class="token punctuation">}</span>   
+    <span class="token punctuation">}</span>    
+    <span class="token comment" spellcheck="true">// 如果超出了搜索区间，表明无法找到目标数，返回 -1      </span>
+    <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>&emsp;&emsp;<strong>核心步骤</strong></p>
+<ol>
+<li>确定搜索的范围和区间</li>
+<li>取中间的数判断是否满足条件</li>
+<li>如果不满足条件，判定应该往哪个半边继续进行搜索</li>
+</ol>
+<h4 id="4-6-二分搜素的变形"><a href="#4-6-二分搜素的变形" class="headerlink" title="4.6 二分搜素的变形"></a>4.6 二分搜素的变形</h4><h5 id="4-6-1-找确定的边界"><a href="#4-6-1-找确定的边界" class="headerlink" title="4.6.1 找确定的边界"></a>4.6.1 找确定的边界</h5><p>&emsp;&emsp;边界分上边界和下边界，有时候也被成为右边界和左边界。确定的边界指边界的数值等于要找的目标数。</p>
+<p>&emsp;&emsp;把第一次出现的地方叫下边界（lower bound），把最后一次出现的地方叫上边界（upper bound）。</p>
+<p>&emsp;&emsp;那么成为 8 的下边界的条件应该有两个：</p>
+<ol>
+<li>该数必须是 8；</li>
+<li>该数的左边一个数必须不是 8：</li>
+</ol>
+<ul>
+<li>8 的左边有数，那么该数必须小于 8；</li>
+<li>8 的左边没有数，即 8 是数组的第一个数。</li>
+</ul>
+<p>&emsp;&emsp;而成为 8 的上边界的条件也应该有两个：</p>
+<ol>
+<li>该数必须是 8；</li>
+<li>该数的右边一个数必须不是 8：</li>
+</ol>
+<ul>
+<li>8 的右边有数，那么该数必须大于8；</li>
+<li>8 的右边没有数，即 8 是数组的最后一个数。</li>
+</ul>
+<h5 id="4-6-2-找模糊的边界"><a href="#4-6-2-找模糊的边界" class="headerlink" title="4.6.2 找模糊的边界"></a>4.6.2 找模糊的边界</h5><p>&emsp;&emsp;二分搜索可以用来查找一些模糊的边界。模糊的边界指，边界的值并不等于目标的值，而是大于或者小于目标的值。</p>
+<p>&emsp;&emsp;判断一个数是不是第一个大于 6 的数，只要它满足如下的条件：</p>
+<ol>
+<li>该数要大于 6；</li>
+<li>该数有可能是数组里的第一个数，或者它之前的一个数比 6 小。</li>
+</ol>
+<h5 id="4-6-3-旋转过的排序数组"><a href="#4-6-3-旋转过的排序数组" class="headerlink" title="4.6.3 旋转过的排序数组"></a>4.6.3 旋转过的排序数组</h5><p>&emsp;<strong>&emsp;如何判断左边是不是排好序的那个部分呢？</strong></p>
+<ul>
+<li>只要比较 nums[low] 和 nums[middle]。nums[low] &lt;= nums[middle] 时，能判定左边这部分一定是排好序的，否则，右边部分一定是排好序的。</li>
+</ul>
+<p>&emsp;&emsp;<strong>判定某一边是排好序的，有什么用处呢？能准确地判断目标值是否在这个区间里。</strong></p>
+<ul>
+<li>如果 nums[low] &lt;= target &amp;&amp; target &lt; nums[middle]，则应该在这个区间里搜索目标值。反之，目标值肯定在另外一边。</li>
+</ul>
+<h5 id="4-6-4-不定长的边界"><a href="#4-6-4-不定长的边界" class="headerlink" title="4.6.4 不定长的边界"></a>4.6.4 不定长的边界</h5><p>&emsp;&emsp;可以把这个问题看成是不知道长度的数组，数组从头开始记录都是时间戳，到了某个位置就成为了空：{2019-01-14, 2019-01-17, … , 2019-08-04, …. , null, null, null …}。</p>
+<p>&emsp;&emsp;借用二分搜索的思想，反着进行搜索：</p>
+<ol>
+<li>一开始设置 low = 0，high = 1</li>
+<li>只要 logs[high] 不为 null，high *= 2</li>
+<li>当 logs[high] 为 null 的时候，可以在区间 [0, high] 进行普通的二分搜索</li>
+</ol>
 
             </div>
             <hr/>
