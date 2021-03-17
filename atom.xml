@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://jiesheng88.github.io/"/>
-  <updated>2021-03-13T07:12:54.759Z</updated>
+  <updated>2021-03-17T12:17:34.104Z</updated>
   <id>http://jiesheng88.github.io/</id>
   
   <author>
@@ -17,13 +17,119 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>【SpringBoot】05-SpringBoot-单元测试</title>
+    <link href="http://jiesheng88.github.io/2021/03/17/springboot-05-springboot-dan-yuan-ce-shi/"/>
+    <id>http://jiesheng88.github.io/2021/03/17/springboot-05-springboot-dan-yuan-ce-shi/</id>
+    <published>2021-03-17T11:52:38.000Z</published>
+    <updated>2021-03-17T12:17:34.104Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一、JUnit5-的变化&quot;&gt;&lt;a href=&quot;#一、JUnit5-的变化&quot; class=&quot;headerlink&quot; title=&quot;一、JUnit5 的变化&quot;&gt;&lt;/a&gt;一、JUnit5 的变化&lt;/h2&gt;&lt;p&gt;&lt;font color=#FF0000
+        
+      
+    
+    </summary>
+    
+    
+      <category term="SpringBoot" scheme="http://jiesheng88.github.io/categories/SpringBoot/"/>
+    
+      <category term="Java" scheme="http://jiesheng88.github.io/categories/SpringBoot/Java/"/>
+    
+    
+      <category term="SpringBoot" scheme="http://jiesheng88.github.io/tags/SpringBoot/"/>
+    
+      <category term="Java框架" scheme="http://jiesheng88.github.io/tags/Java%E6%A1%86%E6%9E%B6/"/>
+    
+      <category term="JUnit5" scheme="http://jiesheng88.github.io/tags/JUnit5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【SpringBoot】04-SpringBoot-数据访问</title>
+    <link href="http://jiesheng88.github.io/2021/03/17/springboot-04-springboot-shu-ju-fang-wen/"/>
+    <id>http://jiesheng88.github.io/2021/03/17/springboot-04-springboot-shu-ju-fang-wen/</id>
+    <published>2021-03-17T08:36:50.000Z</published>
+    <updated>2021-03-17T11:09:08.705Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一、SQL&quot;&gt;&lt;a href=&quot;#一、SQL&quot; class=&quot;headerlink&quot; title=&quot;一、SQL&quot;&gt;&lt;/a&gt;一、SQL&lt;/h2&gt;&lt;h3 id=&quot;1-1-数据源的自动配置—HikariDataSource&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="SpringBoot" scheme="http://jiesheng88.github.io/categories/SpringBoot/"/>
+    
+      <category term="Java" scheme="http://jiesheng88.github.io/categories/SpringBoot/Java/"/>
+    
+    
+      <category term="SpringBoot" scheme="http://jiesheng88.github.io/tags/SpringBoot/"/>
+    
+      <category term="Java框架" scheme="http://jiesheng88.github.io/tags/Java%E6%A1%86%E6%9E%B6/"/>
+    
+      <category term="数据访问" scheme="http://jiesheng88.github.io/tags/%E6%95%B0%E6%8D%AE%E8%AE%BF%E9%97%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>搜索技巧</title>
+    <link href="http://jiesheng88.github.io/2021/03/15/sou-suo-ji-qiao/"/>
+    <id>http://jiesheng88.github.io/2021/03/15/sou-suo-ji-qiao/</id>
+    <published>2021-03-15T06:40:34.000Z</published>
+    <updated>2021-03-15T07:32:24.225Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一、谷歌搜索&quot;&gt;&lt;a href=&quot;#一、谷歌搜索&quot; class=&quot;headerlink&quot; title=&quot;一、谷歌搜索&quot;&gt;&lt;/a&gt;一、谷歌搜索&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;font color=#FF0000
+        
+      
+    
+    </summary>
+    
+    
+      <category term="搜索技巧" scheme="http://jiesheng88.github.io/categories/%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7/"/>
+    
+      <category term="谷歌" scheme="http://jiesheng88.github.io/categories/%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7/%E8%B0%B7%E6%AD%8C/"/>
+    
+    
+      <category term="搜索技巧" scheme="http://jiesheng88.github.io/tags/%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7/"/>
+    
+      <category term="谷歌" scheme="http://jiesheng88.github.io/tags/%E8%B0%B7%E6%AD%8C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【SpringBoot】03-SpringBoot-Web开发</title>
     <link href="http://jiesheng88.github.io/2021/03/13/springboot-03-springboot-web-kai-fa/"/>
     <id>http://jiesheng88.github.io/2021/03/13/springboot-03-springboot-web-kai-fa/</id>
     <published>2021-03-13T07:11:18.000Z</published>
-    <updated>2021-03-13T07:12:54.759Z</updated>
+    <updated>2021-03-16T11:14:15.183Z</updated>
     
     <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一、配置文件&quot;&gt;&lt;a href=&quot;#一、配置文件&quot; class=&quot;headerlink&quot; title=&quot;一、配置文件&quot;&gt;&lt;/a&gt;一、配置文件&lt;/h2&gt;&lt;h3 id=&quot;1-1-文件类型&quot;&gt;&lt;a href=&quot;#1-1-文件类型&quot; class=&quot;headerlink&quot;
+        
+      
     
     </summary>
     
