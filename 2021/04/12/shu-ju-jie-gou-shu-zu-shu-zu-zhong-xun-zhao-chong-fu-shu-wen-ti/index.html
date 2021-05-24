@@ -4,9 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="【数据结构-数组】LeetCode-第-287-号问题：寻找重复数, Java,Python,C,C++, Java开发, 深度学习, 服务研发">
-    <meta name="description" content="1.技巧&amp;emsp;&amp;emsp;二分法的使用 并不一定 需要在排序好的数组上面进行，不要让常见的例题限制了你的思路，二分法还有一个比较高级的用法叫做 按值二分。
-2.题目描述&amp;emsp;&amp;emsp;给定一个包含 n + 1 个整数的数组 n">
+    <meta name="keywords" content="【数据结构-数组】数组中寻找重复数问题, Java,Python,C,C++, Java开发, 深度学习, 服务研发">
+    <meta name="description" content="一、考察点&amp;emsp;&amp;emsp;这类题考察的是程序员的沟通能力。如果面试官提出不同的功能要求（找出任意一个重复数字、找出所有重复的数组）或者性能要求（时间效率优先、空间效率优先），那么最终选取的算法也将不同。
+二、题目一：找出数组中重复的">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>【数据结构-数组】LeetCode-第-287-号问题：寻找重复数 | 橙墟园A杰</title>
+    <title>【数据结构-数组】数组中寻找重复数问题 | 橙墟园A杰</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -284,13 +284,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        【数据结构-数组】LeetCode-第-287-号问题：寻找重复数
+                        【数据结构-数组】数组中寻找重复数问题
                     </div>
                 </div>
             </div>
@@ -382,12 +382,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%95%B0%E7%BB%84/" target="_blank">
-                                <span class="chip bg-color">数组</span>
-                            </a>
-                        
                             <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" target="_blank">
                                 <span class="chip bg-color">数据结构</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%95%B0%E7%BB%84/" target="_blank">
+                                <span class="chip bg-color">数组</span>
                             </a>
                         
                     </div>
@@ -414,7 +414,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-16
+                    2021-04-12
                 </div>
 
                 
@@ -430,10 +430,148 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="1-技巧"><a href="#1-技巧" class="headerlink" title="1.技巧"></a>1.技巧</h3><p>&emsp;&emsp;二分法的使用 <strong>并不一定</strong> 需要在排序好的数组上面进行，<strong>不要让常见的例题限制了你的思路</strong>，二分法还有一个比较高级的用法叫做 <font color=#FF0000 ><strong>按值二分</strong></font>。</p>
-<h3 id="2-题目描述"><a href="#2-题目描述" class="headerlink" title="2.题目描述"></a>2.题目描述</h3><p>&emsp;&emsp;给定一个包含 <em>n + 1</em> 个整数的数组 <em>nums</em>，其数字都在 1 到 n 之间（包括 1 和 n），可知至少存在一个重复的整数。假设只有一个重复的整数，找出这个重复的数。</p>
-<p><img src="/images/%E3%80%90%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%95%B0%E7%BB%84%E3%80%91LeetCode-%E7%AC%AC-287-%E5%8F%B7%E9%97%AE%E9%A2%98%EF%BC%9A%E5%AF%BB%E6%89%BE%E9%87%8D%E5%A4%8D%E6%95%B0/image-20200416115812874.png" alt=""></p>
-<h3 id="3-题目解析"><a href="#3-题目解析" class="headerlink" title="3.题目解析"></a>3.题目解析</h3><p>&emsp;&emsp;由于限制条件太多了，很多方法都不能用！</p>
+                <h2 id="一、考察点"><a href="#一、考察点" class="headerlink" title="一、考察点"></a>一、考察点</h2><p>&emsp;&emsp;这类题考察的是程序员的沟通能力。如果面试官提出不同的功能要求（找出任意一个重复数字、找出所有重复的数组）或者性能要求（时间效率优先、空间效率优先），那么最终选取的算法也将不同。</p>
+<h2 id="二、题目一：找出数组中重复的数字"><a href="#二、题目一：找出数组中重复的数字" class="headerlink" title="二、题目一：找出数组中重复的数字"></a>二、题目一：找出数组中重复的数字</h2><h3 id="2-1-题目描述"><a href="#2-1-题目描述" class="headerlink" title="2.1 题目描述"></a>2.1 题目描述</h3><p>在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内。数组中某些数字是重复的，但不知道有几个数字重复了，也不知道每个数字重复了几次。请找出数组中任意一个重复的数字。</p>
+<p><strong>示例 1：</strong></p>
+<pre class=" language-java"><code class="language-java">输入：
+<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+输出：<span class="token number">2</span> 或 <span class="token number">3</span> </code></pre>
+<p><strong>限制：</strong></p>
+<pre><code>2 &lt;= n &lt;= 100000</code></pre><h3 id="2-2-方法一：排序"><a href="#2-2-方法一：排序" class="headerlink" title="2.2 方法一：排序"></a>2.2 方法一：排序</h3><h4 id="2-2-1-题目解析"><a href="#2-2-1-题目解析" class="headerlink" title="2.2.1 题目解析"></a>2.2.1 题目解析</h4><p>先把输入的数组排序，然后从头到尾扫描排序后的数组即可。时间复杂度为O(nlogn)，空间复杂度为O(1)</p>
+<h3 id="2-3-方法二：利用集合或数组"><a href="#2-3-方法二：利用集合或数组" class="headerlink" title="2.3 方法二：利用集合或数组"></a>2.3 方法二：利用集合或数组</h3><h4 id="2-3-1-题目解析"><a href="#2-3-1-题目解析" class="headerlink" title="2.3.1 题目解析"></a>2.3.1 题目解析</h4><p>集合（Hashset）有一个特性：无序不重复。使用集合存储已经遇到的数字，如果遇到的一个数字已经在集合中，则当前的数字是重复数字。也可以使用数组存储已遇到的数字。时间复杂度：O(n)，空间复杂度：O(n)。</p>
+<h4 id="2-3-2-代码实现"><a href="#2-3-2-代码实现" class="headerlink" title="2.3.2 代码实现"></a>2.3.2 代码实现</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">findRepeatNumber</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 使用数组存储已遇到的数字，先把数组初始化为-1</span>
+        <span class="token keyword">int</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> arr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span>nums<span class="token punctuation">.</span>length<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i <span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                arr<span class="token punctuation">[</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">// nums[i]为多少，则存储在对应下标处</span>
+            <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+                <span class="token keyword">return</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">findRepeatNumber</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 使用集合存储已遇到的数字</span>
+        Set<span class="token operator">&lt;</span>Integer<span class="token operator">></span> set <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> repeat <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>Integer e <span class="token operator">:</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>set<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token comment" spellcheck="true">// set.add(e):当添加已存在的数据时，会返回false</span>
+                repeat <span class="token operator">=</span> e<span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> repeat<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>两种存储方式比较：</p>
+<p><img src="https://gitee.com/jiesheng8888/imgs/raw/master/PicGoImgs/20210412161418.png" alt=""></p>
+<p>数组存储的运行时间是1ms，内存消耗是45.6MB，集合存储的运行时间是5ms，内存消耗是48.5MB。使用数组比集合更优。</p>
+<h3 id="2-4-方法三：利用数组下标"><a href="#2-4-方法三：利用数组下标" class="headerlink" title="2.4 方法三：利用数组下标"></a>2.4 方法三：利用数组下标</h3><h4 id="2-4-1-题目解析"><a href="#2-4-1-题目解析" class="headerlink" title="2.4.1 题目解析"></a>2.4.1 题目解析</h4><p>类似于第二种方法的思想，只不过是通过自身数组的移动来实现的。</p>
+<p>我们注意到数组中的数字都在0~n-l的范围内。如果这个数组中没有重复的数字，那么当数组排序之后数字i将出现在下标为i的位置。由于数组中有重复的数字，有些位置可能存在多个数字，同时有些位置可能没有数字。</p>
+<p>从头到尾依次扫描这个数组中的每个数字。</p>
+<ul>
+<li>当扫描到下标为i的数字时，首先比较这个数字nums[i]是不是等于i。<ul>
+<li>如果是，则接着扫描下一个数字；</li>
+<li>如果不是，则再拿它和第nums[i]个数字进行比较。<ul>
+<li>如果它和第nums[i]个数字相等，就找到了一个重复的数字（该数字在下标为i和nums[i]的位置都出现了）</li>
+<li>如果它和第nums[i]个数字不相等，就把第i个数字和第nums[i]个数字交换，把nums[i]放到属于它的位置。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>接下来再重复这个比较、交换的过程，直到我们发现一个重复的数字。</li>
+</ul>
+<p>时间复杂度：O(n)，空间复杂度：O(1)。</p>
+<h4 id="2-4-2-代码实现"><a href="#2-4-2-代码实现" class="headerlink" title="2.4.2 代码实现"></a>2.4.2 代码实现</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">findRepeatNumber</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">int</span> m <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">// 存储i处的数组值</span>
+            <span class="token comment" spellcheck="true">// 1.先比较索引i处的值m是否等于i</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>m<span class="token operator">!=</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token comment" spellcheck="true">// 索引i处的值m不等于i</span>
+                <span class="token comment" spellcheck="true">// 2.将m作为索引，比较索引m处的值nums[m]是否等于索引m</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>m <span class="token operator">==</span> nums<span class="token punctuation">[</span>m<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token comment" spellcheck="true">// 找到重复数字，该数字在下标为i和nums[i]的位置都出现了</span>
+                    <span class="token keyword">return</span> m<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+                    <span class="token comment" spellcheck="true">// 把第i个数字和第nums[i]个数字交换，把nums[i]放到对应索引处</span>
+                    <span class="token keyword">int</span> temp <span class="token operator">=</span> nums<span class="token punctuation">[</span>m<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                    nums<span class="token punctuation">[</span>m<span class="token punctuation">]</span> <span class="token operator">=</span> m<span class="token punctuation">;</span>
+                    m <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            <span class="token comment" spellcheck="true">// 索引i处的值m等于i的话，遍历下一个</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h2 id="三、题目二：不修改数组找出重复的数字"><a href="#三、题目二：不修改数组找出重复的数字" class="headerlink" title="三、题目二：不修改数组找出重复的数字"></a>三、题目二：不修改数组找出重复的数字</h2><h3 id="3-1-技巧"><a href="#3-1-技巧" class="headerlink" title="3.1 技巧"></a>3.1 技巧</h3><p>&emsp;&emsp;二分法的使用 <strong>并不一定</strong> 需要在排序好的数组上面进行，<strong>不要让常见的例题限制了你的思路</strong>，二分法还有一个比较高级的用法叫做 <font color=#FF0000 ><strong>按值二分</strong></font>。</p>
+<h3 id="3-2-题目1描述"><a href="#3-2-题目1描述" class="headerlink" title="3.2 题目1描述"></a>3.2 题目1描述</h3><p>在一个长度为n + 1 的数组里的所有数字都在1～n 的范围内，所以数组中至少有一个数字是重复的。请找出数组中任意一个重复的数字，但不能修改输入的数组。</p>
+<p><strong>示例 1：</strong></p>
+<pre class=" language-java"><code class="language-java">输入：
+<span class="token punctuation">[</span><span class="token number">2</span>，<span class="token number">3</span>，<span class="token number">5</span>，<span class="token number">4</span>，<span class="token number">3</span>，<span class="token number">2</span>，<span class="token number">6</span>，<span class="token number">7</span><span class="token punctuation">]</span>
+输出：<span class="token number">2</span> 或 <span class="token number">3</span> </code></pre>
+<h3 id="3-3-题目1解析"><a href="#3-3-题目1解析" class="headerlink" title="3.3 题目1解析"></a>3.3 题目1解析</h3><p>我们可以创建一个长度为n+1的辅助数组，然后逐一把原数组的每个数字复制到辅助数组。如果原数组中被复制的数字是m，则把它复制到辅助数组中下标为m的位置。这样很容易就能发现哪个数字是重复的。由于需要创建一个数组，该方案需要O（n）的辅助空间。</p>
+<p>接下来我们尝试避免使用O（n）的辅助空间。为什么数组中会有重复的数字？假如没有重复的数字，那么在从1～n的范围里只有n个数字。由于数组里包含超过n个数字，所以一定包含了重复的数字。<font color=#FF0000 >看起来在某范围里数字的个数对解决这个问题很重要。</font></p>
+<p>我们把从1～n的数字从中间的数字m分为两部分，前面一半为1～m，后面一半为m+1～n。如果1～m的数字的数目超过m，那么这一半的区间里一定包含重复的数字；否则，另一半m+1～n的区间里一定包含重复的数字。我们可以继续把包含重复数字的区间一分为二，直到找到一个重复的数字。<font color=#FF0000 >这个过程和二分查找算法很类似，只是多了一步统计区间里数字的数目。</font></p>
+<h3 id="3-4-题目1代码实现"><a href="#3-4-题目1代码实现" class="headerlink" title="3.4 题目1代码实现"></a>3.4 题目1代码实现</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> num <span class="token operator">=</span> <span class="token function">findRepeatNumber</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">findRepeatNumber</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 按值二分查找</span>
+        <span class="token keyword">int</span> start <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> end <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>start<span class="token operator">&lt;=</span>end<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">int</span> mid <span class="token operator">=</span> start <span class="token operator">+</span> <span class="token punctuation">(</span>end <span class="token operator">-</span> start<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">// 统计start 到 mid 之间数据的个数</span>
+            <span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token function">countRange</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> start<span class="token punctuation">,</span> mid<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>start<span class="token operator">==</span>end<span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token comment" spellcheck="true">// [1,1] start=1,end=1</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>count<span class="token operator">></span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">return</span> start<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>            
+                    <span class="token keyword">break</span><span class="token punctuation">;</span>    
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+
+            <span class="token comment" spellcheck="true">// start~mid区间的数字数目count 大于区间值，证明在该区间内存在重复数字</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>count <span class="token operator">></span> <span class="token punctuation">(</span>mid<span class="token operator">-</span>start<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                end <span class="token operator">=</span> mid<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+                start <span class="token operator">=</span> mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">countRange</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> start<span class="token punctuation">,</span> <span class="token keyword">int</span> end<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>nums <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// 统计整个数组中在该区间内数据的个数</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">>=</span>start <span class="token operator">&amp;&amp;</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&lt;=</span>end<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                count<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> count<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="3-5-题目2描述"><a href="#3-5-题目2描述" class="headerlink" title="3.5 题目2描述"></a>3.5 题目2描述</h3><p>&emsp;&emsp;给定一个包含 <em>n + 1</em> 个整数的数组 <em>nums</em>，其数字都在 1 到 n 之间（包括 1 和 n），可知至少存在一个重复的整数。假设只有一个重复的整数，找出这个重复的数。</p>
+<img src="https://gitee.com/jiesheng8888/imgs/raw/master/PicGoImgs/20210412153324.png" style="zoom:80%;" />
+
+<h3 id="3-6-题目2解析"><a href="#3-6-题目2解析" class="headerlink" title="3.6 题目2解析"></a>3.6 题目2解析</h3><p>&emsp;&emsp;由于限制条件太多了，很多方法都不能用！</p>
 <p>&emsp;&emsp;假如没有这些限制，可以采取的方法有：</p>
 <ul>
 <li><font color=#FF0000 >不能更改原数组</font>导致无法排序，也无法用<font color=#FF0000 >index 和元素建立关系</font> index 和元素建立关系；</li>
@@ -469,8 +607,9 @@
 </ul>
 <p>&emsp;&emsp;而且你可以看到，我们要找的答案其实就处于一个分界点的位置，寻找边界值，这又是二分的一个应用，而且题目已经告诉我们数组里面的值只可能在 [1, n] 之间，这么一来，思路就是在 [1, n] 区间上做二分，然后按我们之前提到的逻辑去做分割。整个解法的时间复杂度是 <strong>O(nlogn)</strong>，也是满足题目要求的。</p>
 <p>&emsp;&emsp;动画描述参考：<a href="https://mp.weixin.qq.com/s?__biz=MzUyNjQxNjYyMg==&amp;mid=2247486581&amp;idx=1&amp;sn=0ed7d74ba7ebf427c58ade56bc4f8f68" target="_blank" rel="noopener">https://mp.weixin.qq.com/s?__biz=MzUyNjQxNjYyMg==&amp;mid=2247486581&amp;idx=1&amp;sn=0ed7d74ba7ebf427c58ade56bc4f8f68</a></p>
-<p><img src="/images/%E3%80%90%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%95%B0%E7%BB%84%E3%80%91LeetCode-%E7%AC%AC-287-%E5%8F%B7%E9%97%AE%E9%A2%98%EF%BC%9A%E5%AF%BB%E6%89%BE%E9%87%8D%E5%A4%8D%E6%95%B0/image-20200417163357019.png" alt=""></p>
-<h3 id="4-代码实现"><a href="#4-代码实现" class="headerlink" title="4.代码实现"></a>4.代码实现</h3><p>&emsp;&emsp;java代码：</p>
+<img src="https://gitee.com/jiesheng8888/imgs/raw/master/PicGoImgs/20210412153339.png" style="zoom:80%;" />
+
+<h3 id="3-7-题目2代码实现"><a href="#3-7-题目2代码实现" class="headerlink" title="3.7 题目2代码实现"></a>3.7 题目2代码实现</h3><p>&emsp;&emsp;java代码：</p>
 <pre class=" language-java"><code class="language-java">    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">findDuplicate</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arrays<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">int</span> len <span class="token operator">=</span> arrays<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
         <span class="token keyword">int</span> start <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
@@ -493,58 +632,7 @@
         <span class="token punctuation">}</span>
         <span class="token keyword">return</span> start<span class="token punctuation">;</span>
     <span class="token punctuation">}</span></code></pre>
-<p>&emsp;&emsp;Python代码：</p>
-<pre class=" language-Python"><code class="language-Python">def findDuplicate(list):
-    length = len(list)
-    start = 1
-    end = length - 1
-
-    while(start < end):
-        counter = 0
-        mid = int(start + (end - start) / 2)
-        for i in list:
-            if(i <= mid):
-                counter += 1
-        if(counter > mid):
-            end = mid
-        else:
-            start = mid + 1
-    return start</code></pre>
-<p>&emsp;&emsp;C语言代码：</p>
-<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
-
-<span class="token keyword">int</span> <span class="token function">findDuplicate</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span> array<span class="token punctuation">,</span> <span class="token keyword">int</span> arraylength<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">int</span> len <span class="token operator">=</span> arraylength<span class="token punctuation">;</span>
-    <span class="token keyword">int</span> start <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> end <span class="token operator">=</span> len <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">while</span><span class="token punctuation">(</span>start <span class="token operator">&lt;</span> end<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">int</span> counter <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">int</span> mid <span class="token operator">=</span> start <span class="token operator">+</span> <span class="token punctuation">(</span>end <span class="token operator">-</span> start<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span>array<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> mid<span class="token punctuation">)</span><span class="token punctuation">{</span>
-                counter <span class="token operator">++</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-
-        <span class="token punctuation">}</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>counter <span class="token operator">></span> mid<span class="token punctuation">)</span><span class="token punctuation">{</span>
-            end <span class="token operator">=</span> mid<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
-            start <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> start<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"testing...\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> arraylength <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> array<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> index <span class="token operator">=</span> <span class="token function">findDuplicate</span><span class="token punctuation">(</span>array<span class="token punctuation">,</span> arraylength<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span>index<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<h3 id="5-另一种解题思路"><a href="#5-另一种解题思路" class="headerlink" title="5.另一种解题思路"></a>5.另一种解题思路</h3><p>&emsp;&emsp;另外一种 O(n) 的解法借鉴快慢指针找交点的思想，算法非常的巧妙，也非常的有趣，但不太容易想到，这里把代码放上。</p>
+<h3 id="3-8-另一种解题思路"><a href="#3-8-另一种解题思路" class="headerlink" title="3.8 另一种解题思路"></a>3.8 另一种解题思路</h3><p>&emsp;&emsp;另外一种 O(n) 的解法借鉴快慢指针找交点的思想，算法非常的巧妙，也非常的有趣，但不太容易想到，这里把代码放上。</p>
 <pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//快慢指针</span>
 <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">findDuplicate</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>        
     <span class="token keyword">int</span> fast <span class="token operator">=</span> nums<span class="token punctuation">[</span>nums<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
@@ -703,7 +791,7 @@
                     </span>
                     <a href="http://jiesheng88.github.io" class="b-link-green">橙墟园A杰</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2020/04/16/shu-ju-jie-gou-shu-zu-leetcode-di-287-hao-wen-ti-xun-zhao-chong-fu-shu/" class="b-link-green">【数据结构-数组】LeetCode-第-287-号问题：寻找重复数</a>
+                    <a href="/2021/04/12/shu-ju-jie-gou-shu-zu-shu-zu-zhong-xun-zhao-chong-fu-shu-wen-ti/" class="b-link-green">【数据结构-数组】数组中寻找重复数问题</a>
                 </p>
             </div>
         </div>
@@ -728,22 +816,21 @@
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/04/17/shu-ju-jie-gou-shu-zu-leetcode-di-41-hao-wen-ti-que-shi-de-di-yi-ge-zheng-shu/">
+                <a href="/2021/04/13/shu-ju-jie-gou-shu-zu-er-wei-shu-zu-zhong-de-cha-zhao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="【数据结构-数组】LeetCode 第 41 号问题：缺失的第一个正数">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="【数据结构-数组】二维数组中的查找">
                         
-                        <span class="card-title">【数据结构-数组】LeetCode 第 41 号问题：缺失的第一个正数</span>
+                        <span class="card-title">【数据结构-数组】二维数组中的查找</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">1.题目描述&emsp;&emsp;给定一个未排序的整数数组，找出其中没有出现的最小的正整数。
-
-2.题目解析&emsp;&emsp;这道题如果不加上  O(n) 时间和  O(1) 空间这样的限定条件，应该再简单不过，但是加上了这两个要求</div>
+                    <div class="summary">一、考察点考查应聘者分析问题的能力。当应聘者发现问题比较复杂时，能不能通过具体的例子找出其中的规律，是能否解决这个问题的关键所在。这个题目只要从一个具体的二维数组的右上角开始分析，就能找到查找的规律，从而找到解决问题的突破口。
+当我们需要解</div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-04-17
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-04-13
                         </span>
                         <span class="publish-author">
                             
@@ -760,12 +847,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E7%BB%84/" target="_blank">
-                        <span class="chip bg-color">数组</span>
-                    </a>
-                    
                     <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" target="_blank">
                         <span class="chip bg-color">数据结构</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E7%BB%84/" target="_blank">
+                        <span class="chip bg-color">数组</span>
                     </a>
                     
                 </div>
@@ -779,28 +866,34 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/04/15/shu-ju-jie-gou-shu-zu-shu-zu-ji-qiao/">
+                <a href="/2021/03/17/springboot-05-springboot-dan-yuan-ce-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="【数据结构-数组】如何高效对有序数组/链表去重？">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="【SpringBoot】05-SpringBoot-单元测试">
                         
-                        <span class="card-title">【数据结构-数组】如何高效对有序数组/链表去重？</span>
+                        <span class="card-title">【SpringBoot】05-SpringBoot-单元测试</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">1.数组简介&emsp;&emsp;数组，将元素存储到内存的连续位置中，是最基本的数据结构。在任何和编程相关的面试中，都会被问到和数组相关的问题，可以说是非常热门的考题之一。比如：将数组反转、对数组进行排序、搜索数组中的元素等。
-2.数组优</div>
+                    <div class="summary">一、JUnit5 的变化Spring Boot 2.2.0 版本开始引入 JUnit 5 作为单元测试默认库
+作为最新版本的JUnit框架，JUnit5与之前版本的Junit框架有很大的不同。由三个不同子项目的几个不同模块组成。
+
+JUni</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-04-15
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-03-17
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%B0%E7%BB%84/" class="post-category" target="_blank">
-                                    数组
+                            <a href="/categories/SpringBoot/" class="post-category" target="_blank">
+                                    SpringBoot
+                                </a>
+                            
+                            <a href="/categories/SpringBoot/Java/" class="post-category" target="_blank">
+                                    Java
                                 </a>
                             
                             
@@ -810,12 +903,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E7%BB%84/" target="_blank">
-                        <span class="chip bg-color">数组</span>
+                    <a href="/tags/SpringBoot/" target="_blank">
+                        <span class="chip bg-color">SpringBoot</span>
                     </a>
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" target="_blank">
-                        <span class="chip bg-color">数据结构</span>
+                    <a href="/tags/Java%E6%A1%86%E6%9E%B6/" target="_blank">
+                        <span class="chip bg-color">Java框架</span>
+                    </a>
+                    
+                    <a href="/tags/JUnit5/" target="_blank">
+                        <span class="chip bg-color">JUnit5</span>
                     </a>
                     
                 </div>

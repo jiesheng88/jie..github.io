@@ -382,12 +382,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%95%B0%E7%BB%84/" target="_blank">
-                                <span class="chip bg-color">数组</span>
-                            </a>
-                        
                             <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" target="_blank">
                                 <span class="chip bg-color">数据结构</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%95%B0%E7%BB%84/" target="_blank">
+                                <span class="chip bg-color">数组</span>
                             </a>
                         
                     </div>
@@ -432,9 +432,10 @@
 <h3 id="3-数组解题技巧"><a href="#3-数组解题技巧" class="headerlink" title="3.数组解题技巧"></a>3.数组解题技巧</h3><ul>
 <li>&emsp;&lt;1&gt; 对于数组来说，<font color=#FF0000 >在尾部插入、删除元素是比较高效的</font>，时间复杂度是 O(1)，但是如果在中间或者开头插入、删除元素，就会涉及数据的搬移，时间复杂度为 O(N)。我们要<font color=#FF0000 >尽可能只对数组尾部的元素进行操作</font>，以避免额外的时间复杂度。</li>
 <li>&emsp;&lt;2&gt; <strong>对于数组相关的算法问题，有一个通用的技巧：要尽量避免在中间删除元素，那我就先想办法把这个元素换到最后去</strong>。这样的话，最终待删除的元素都拖在数组尾部，一个一个 pop 掉就行了，每次操作的时间复杂度也就降低到 O(1) 了。按照这个思路呢，又可以衍生出解决类似需求的通用方式：<font color=#FF0000 >快慢指针</font>。</li>
+<li>&emsp;&lt;3&gt;当从头到尾遍历数组，感到复杂时，可以尝试<font color=#FF0000 >从尾到头遍历。</font></li>
 </ul>
 <h3 id="4-精选面试题：如何高效对有序数组-链表去重？"><a href="#4-精选面试题：如何高效对有序数组-链表去重？" class="headerlink" title="4.精选面试题：如何高效对有序数组/链表去重？"></a>4.精选面试题：如何高效对有序数组/链表去重？</h3><p>&emsp;&emsp;先看题目</p>
-<p><img src="/images/%E3%80%90%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%95%B0%E7%BB%84%E3%80%91%E6%95%B0%E7%BB%84%E6%8A%80%E5%B7%A7/image-20200415120136464.png" alt="题目"></p>
+<p><img src="https://gitee.com/jiesheng8888/imgs/raw/master/PicGoImgs/20210412154029.png" alt="题目"></p>
 <p>&emsp;&emsp;显然，由于数组已经排序，所以重复的元素一定连在一起，找出它们并不难，但如果使用暴力解法的话，整个时间复杂度是会达到 O(N^2)。而且题目要求我们原地修改，也就是说不能用辅助数组，空间复杂度得是 O(1)。</p>
 <p>&emsp;&emsp;我们使用快慢指针进行解题：让慢指针<code>slow</code>走左后面，快指针<code>fast</code>走在前面探路，找到一个不重复的元素就告诉<code>slow</code>并让<code>slow</code>前进一步。这样当<code>fast</code>指针遍历完整个数组<code>nums</code>后，<code>nums[0..slow]</code>就是不重复元素，之后的所有元素都是重复元素。</p>
 <p>&emsp;&emsp;java代码：</p>
@@ -503,14 +504,14 @@
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
 <p>&emsp;&emsp;看下算法执行的过程：</p>
-<p><img src="/images/%E3%80%90%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%95%B0%E7%BB%84%E3%80%91%E6%95%B0%E7%BB%84%E6%8A%80%E5%B7%A7/640.gif" alt="有序数组去重"></p>
+<p><img src="https://gitee.com/jiesheng8888/imgs/raw/master/PicGoImgs/20210412154055.gif" alt="有序数组去重"></p>
 <p>&emsp;&emsp;再简单扩展一下，如果给你一个有序链表，如何去重呢？其实和数组是一模一样的，唯一的区别是把数组赋值操作变成操作指针而已：</p>
 <p>&emsp;&emsp;java代码：</p>
 <pre class=" language-java"><code class="language-java"></code></pre>
 <p>&emsp;&emsp;Python代码：</p>
 <pre class=" language-python"><code class="language-python"></code></pre>
 <p>&emsp;&emsp;看下算法执行的过程：</p>
-<p><img src="/images/%E3%80%90%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%95%B0%E7%BB%84%E3%80%91%E6%95%B0%E7%BB%84%E6%8A%80%E5%B7%A7/640-1586935359752.gif" alt="有序链表去重"></p>
+<p><img src="https://gitee.com/jiesheng8888/imgs/raw/master/PicGoImgs/20210412154106.gif" alt="有序链表去重"></p>
 
             </div>
             <hr/>
@@ -676,21 +677,22 @@
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/04/16/shu-ju-jie-gou-shu-zu-leetcode-di-287-hao-wen-ti-xun-zhao-chong-fu-shu/">
+                <a href="/2020/04/17/shu-ju-jie-gou-shu-zu-leetcode-di-41-hao-wen-ti-que-shi-de-di-yi-ge-zheng-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="【数据结构-数组】LeetCode-第-287-号问题：寻找重复数">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="【数据结构-数组】LeetCode 第 41 号问题：缺失的第一个正数">
                         
-                        <span class="card-title">【数据结构-数组】LeetCode-第-287-号问题：寻找重复数</span>
+                        <span class="card-title">【数据结构-数组】LeetCode 第 41 号问题：缺失的第一个正数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">1.技巧&emsp;&emsp;二分法的使用 并不一定 需要在排序好的数组上面进行，不要让常见的例题限制了你的思路，二分法还有一个比较高级的用法叫做 按值二分。
-2.题目描述&emsp;&emsp;给定一个包含 n + 1 个整数的数组 n</div>
+                    <div class="summary">1.题目描述&emsp;&emsp;给定一个未排序的整数数组，找出其中没有出现的最小的正整数。
+
+2.题目解析&emsp;&emsp;这道题如果不加上  O(n) 时间和  O(1) 空间这样的限定条件，应该再简单不过，但是加上了这两个要求</div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-04-16
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-04-17
                         </span>
                         <span class="publish-author">
                             
@@ -700,10 +702,6 @@
                                     数组
                                 </a>
                             
-                            <a href="/categories/%E6%95%B0%E7%BB%84/%E4%BA%8C%E5%88%86%E6%B3%95/" class="post-category" target="_blank">
-                                    二分法
-                                </a>
-                            
                             
                         </span>
                     </div>
@@ -711,12 +709,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E7%BB%84/" target="_blank">
-                        <span class="chip bg-color">数组</span>
-                    </a>
-                    
                     <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" target="_blank">
                         <span class="chip bg-color">数据结构</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E7%BB%84/" target="_blank">
+                        <span class="chip bg-color">数组</span>
                     </a>
                     
                 </div>
