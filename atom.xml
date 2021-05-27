@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://jiesheng88.github.io/"/>
-  <updated>2021-05-25T09:11:36.758Z</updated>
+  <updated>2021-05-27T01:54:10.154Z</updated>
   <id>http://jiesheng88.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>【面试】MySQL高级优化</title>
-    <link href="http://jiesheng88.github.io/2021/05/25/mian-shi-mysql-gao-ji-you-hua/"/>
-    <id>http://jiesheng88.github.io/2021/05/25/mian-shi-mysql-gao-ji-you-hua/</id>
-    <published>2021-05-25T08:49:00.296Z</published>
-    <updated>2021-05-25T09:11:36.758Z</updated>
+    <title>【面试-MySQL】MySQL高级优化</title>
+    <link href="http://jiesheng88.github.io/2021/04/25/mian-shi-mysql-mysql-gao-ji-you-hua/"/>
+    <id>http://jiesheng88.github.io/2021/04/25/mian-shi-mysql-mysql-gao-ji-you-hua/</id>
+    <published>2021-04-25T01:49:49.000Z</published>
+    <updated>2021-05-27T01:54:10.154Z</updated>
     
     <summary type="html">
     
@@ -29,13 +29,23 @@
       
         
         
-          &lt;p&gt;title: 【面试】MySQL高级优化&lt;br&gt;summary:
+          &lt;h2 id=&quot;1-MySQL环境&quot;&gt;&lt;a href=&quot;#1-MySQL环境&quot; class=&quot;headerlink&quot; title=&quot;1 MySQL环境&quot;&gt;&lt;/a&gt;1 MySQL环境&lt;/h2&gt;&lt;h3 id=&quot;1-1-环境安装&quot;&gt;&lt;a href=&quot;#1-1-环境安装&quot;
         
       
     
     </summary>
     
     
+      <category term="面试" scheme="http://jiesheng88.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="MySQL优化" scheme="http://jiesheng88.github.io/categories/%E9%9D%A2%E8%AF%95/MySQL%E4%BC%98%E5%8C%96/"/>
+    
+    
+      <category term="面试" scheme="http://jiesheng88.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="MySQL" scheme="http://jiesheng88.github.io/tags/MySQL/"/>
+    
+      <category term="SQL优化" scheme="http://jiesheng88.github.io/tags/SQL%E4%BC%98%E5%8C%96/"/>
     
   </entry>
   

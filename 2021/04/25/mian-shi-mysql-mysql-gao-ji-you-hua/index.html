@@ -4,16 +4,14 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="【面试】MySQL高级优化, Java,Python,C,C++, Java开发, 深度学习, 服务研发">
-    <meta name="description" content="title: 【面试】MySQL高级优化summary: MySQL高级优化tags:
+    <meta name="keywords" content="【面试-MySQL】MySQL高级优化, Java,Python,C,C++, Java开发, 深度学习, 服务研发">
+    <meta name="description" content="1 MySQL环境1.1 环境安装# 查看Linux服务器上是否安装过MySQL
+rpm -qa | grep -i mysql # 查询出所有mysql依赖包
 
-面试
-MySQL
-SQL优化categories:
-面试
-MySQLdate: 2021-04-15 16:49:00
+# 1、拉取镜像
+docker pull mysql:5.7
 
-1 MySQL环境1.1 环">
+# 2、创建">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +19,7 @@ MySQLdate: 2021-04-15 16:49:00
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>【面试】MySQL高级优化 | 橙墟园A杰</title>
+    <title>【面试-MySQL】MySQL高级优化 | 橙墟园A杰</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -36,8 +34,8 @@ MySQLdate: 2021-04-15 16:49:00
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="橙墟园A杰" type="application/atom+xml">
-</head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="橙墟园A杰" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -291,13 +289,13 @@ MySQLdate: 2021-04-15 16:49:00
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        【面试】MySQL高级优化
+                        【面试-MySQL】MySQL高级优化
                     </div>
                 </div>
             </div>
@@ -387,12 +385,37 @@ MySQLdate: 2021-04-15 16:49:00
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E9%9D%A2%E8%AF%95/" target="_blank">
+                                <span class="chip bg-color">面试</span>
+                            </a>
+                        
+                            <a href="/tags/MySQL/" target="_blank">
+                                <span class="chip bg-color">MySQL</span>
+                            </a>
+                        
+                            <a href="/tags/SQL%E4%BC%98%E5%8C%96/" target="_blank">
+                                <span class="chip bg-color">SQL优化</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E9%9D%A2%E8%AF%95/" class="post-category" target="_blank">
+                                面试
+                            </a>
+                        
+                            <a href="/categories/%E9%9D%A2%E8%AF%95/MySQL%E4%BC%98%E5%8C%96/" class="post-category" target="_blank">
+                                MySQL优化
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -400,7 +423,7 @@ MySQLdate: 2021-04-15 16:49:00
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-25
+                    2021-04-25
                 </div>
 
                 
@@ -416,15 +439,7 @@ MySQLdate: 2021-04-15 16:49:00
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>title: 【面试】MySQL高级优化<br>summary: MySQL高级优化<br>tags:</p>
-<ul>
-<li>面试</li>
-<li>MySQL</li>
-<li>SQL优化<br>categories:</li>
-<li>面试</li>
-<li>MySQL<br>date: 2021-04-15 16:49:00</li>
-</ul>
-<h2 id="1-MySQL环境"><a href="#1-MySQL环境" class="headerlink" title="1 MySQL环境"></a>1 MySQL环境</h2><h3 id="1-1-环境安装"><a href="#1-1-环境安装" class="headerlink" title="1.1 环境安装"></a>1.1 环境安装</h3><pre class=" language-shell"><code class="language-shell"># 查看Linux服务器上是否安装过MySQL
+                <h2 id="1-MySQL环境"><a href="#1-MySQL环境" class="headerlink" title="1 MySQL环境"></a>1 MySQL环境</h2><h3 id="1-1-环境安装"><a href="#1-1-环境安装" class="headerlink" title="1.1 环境安装"></a>1.1 环境安装</h3><pre class=" language-shell"><code class="language-shell"># 查看Linux服务器上是否安装过MySQL
 rpm -qa | grep -i mysql # 查询出所有mysql依赖包
 
 # 1、拉取镜像
@@ -627,7 +642,7 @@ slow_query_log_file = slow.log</code></pre>
 </ol>
 <h2 id="3-存储引擎"><a href="#3-存储引擎" class="headerlink" title="3 存储引擎"></a>3 存储引擎</h2><p><code>show engines;</code>命令查看MySQL5.7支持的存储引擎。</p>
 <pre class=" language-shell"><code class="language-shell">mysql> show engines;</code></pre>
-<img src="https://gitee.com/jiesheng8888/imgs/raw/master/PicGoImgs/存储引擎" alt="存储引擎" style="zoom:80%;" />
+<img src="https://gitee.com/jiesheng8888/imgs/raw/master/PicGoImgs/20210526213816.png" alt="存储引擎" style="zoom:80%;" />
 
 <p><code>show variables like &#39;default_storage_engine%&#39;;</code>查看当前数据库正在使用的存储引擎。</p>
 <pre class=" language-shell"><code class="language-shell">mysql> show variables like 'default_storage_engine%';
@@ -2993,7 +3008,7 @@ Master_SSL_Verify_Server_Cert: No
                     </span>
                     <a href="http://jiesheng88.github.io" class="b-link-green">橙墟园A杰</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2021/05/25/mian-shi-mysql-gao-ji-you-hua/" class="b-link-green">【面试】MySQL高级优化</a>
+                    <a href="/2021/04/25/mian-shi-mysql-mysql-gao-ji-you-hua/" class="b-link-green">【面试-MySQL】MySQL高级优化</a>
                 </p>
             </div>
         </div>
@@ -3019,38 +3034,60 @@ Master_SSL_Verify_Server_Cert: No
                 <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2021/05/25/mian-shi-mysql-gao-ji-you-hua/">
+                <a href="/2021/04/25/mian-shi-mysql-mysql-gao-ji-you-hua/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="【面试】MySQL高级优化">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="【面试-MySQL】MySQL高级优化">
                         
-                        <span class="card-title">【面试】MySQL高级优化</span>
+                        <span class="card-title">【面试-MySQL】MySQL高级优化</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">title: 【面试】MySQL高级优化summary: MySQL高级优化tags:
+                    <div class="summary">1 MySQL环境1.1 环境安装# 查看Linux服务器上是否安装过MySQL
+rpm -qa | grep -i mysql # 查询出所有mysql依赖包
 
-面试
-MySQL
-SQL优化categories:
-面试
-MySQLdate: 2021-04-15 16:49:00
+# 1、拉取镜像
+docker pull mysql:5.7
 
-1 MySQL环境1.1 环</div>
+# 2、创建</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-05-25
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-04-25
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fa fa-user fa-fw"></i>
-                            Jie
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E9%9D%A2%E8%AF%95/" class="post-category" target="_blank">
+                                    面试
+                                </a>
+                            
+                            <a href="/categories/%E9%9D%A2%E8%AF%95/MySQL%E4%BC%98%E5%8C%96/" class="post-category" target="_blank">
+                                    MySQL优化
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%9D%A2%E8%AF%95/" target="_blank">
+                        <span class="chip bg-color">面试</span>
+                    </a>
+                    
+                    <a href="/tags/MySQL/" target="_blank">
+                        <span class="chip bg-color">MySQL</span>
+                    </a>
+                    
+                    <a href="/tags/SQL%E4%BC%98%E5%8C%96/" target="_blank">
+                        <span class="chip bg-color">SQL优化</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
