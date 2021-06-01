@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://jiesheng88.github.io/"/>
-  <updated>2021-05-27T01:54:10.154Z</updated>
+  <updated>2021-06-01T02:28:26.654Z</updated>
   <id>http://jiesheng88.github.io/</id>
   
   <author>
@@ -15,6 +15,108 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【面试-Java】类和实例的初始化过程</title>
+    <link href="http://jiesheng88.github.io/2021/05/21/mian-shi-java-lei-he-shi-li-de-chu-shi-hua-guo-cheng/"/>
+    <id>http://jiesheng88.github.io/2021/05/21/mian-shi-java-lei-he-shi-li-de-chu-shi-hua-guo-cheng/</id>
+    <published>2021-05-21T13:02:48.000Z</published>
+    <updated>2021-06-01T02:28:26.654Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-面试题描述&quot;&gt;&lt;a href=&quot;#1-面试题描述&quot; class=&quot;headerlink&quot; title=&quot;1 面试题描述&quot;&gt;&lt;/a&gt;1 面试题描述&lt;/h2&gt;&lt;p&gt;以下代码，运行结果&lt;/p&gt;
+&lt;pre class=&quot; language-java&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+    
+      <category term="面试" scheme="http://jiesheng88.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="Java基础" scheme="http://jiesheng88.github.io/categories/%E9%9D%A2%E8%AF%95/Java%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="面试" scheme="http://jiesheng88.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="Java基础" scheme="http://jiesheng88.github.io/tags/Java%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="类和实例的初始化过程" scheme="http://jiesheng88.github.io/tags/%E7%B1%BB%E5%92%8C%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E8%BF%87%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【面试-Java】成员变量和局部变量</title>
+    <link href="http://jiesheng88.github.io/2021/05/18/mian-shi-java-cheng-yuan-bian-liang-he-ju-bu-bian-liang/"/>
+    <id>http://jiesheng88.github.io/2021/05/18/mian-shi-java-cheng-yuan-bian-liang-he-ju-bu-bian-liang/</id>
+    <published>2021-05-18T12:02:10.000Z</published>
+    <updated>2021-05-28T12:51:45.435Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-面试题描述&quot;&gt;&lt;a href=&quot;#1-面试题描述&quot; class=&quot;headerlink&quot; title=&quot;1 面试题描述&quot;&gt;&lt;/a&gt;1 面试题描述&lt;/h2&gt;&lt;p&gt;以下代码运行后所得结果&lt;/p&gt;
+&lt;pre class=&quot; language-java&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+    
+      <category term="面试" scheme="http://jiesheng88.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="Java基础" scheme="http://jiesheng88.github.io/categories/%E9%9D%A2%E8%AF%95/Java%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="面试" scheme="http://jiesheng88.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="Java基础" scheme="http://jiesheng88.github.io/tags/Java%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="成员变量与局部变量" scheme="http://jiesheng88.github.io/tags/%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【面试-Java】i++与++i的区别</title>
+    <link href="http://jiesheng88.github.io/2021/05/06/mian-shi-java-i-yu-i-de-qu-bie/"/>
+    <id>http://jiesheng88.github.io/2021/05/06/mian-shi-java-i-yu-i-de-qu-bie/</id>
+    <published>2021-05-06T11:55:09.000Z</published>
+    <updated>2021-05-28T02:09:07.041Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-面试题描述&quot;&gt;&lt;a href=&quot;#1-面试题描述&quot; class=&quot;headerlink&quot; title=&quot;1 面试题描述&quot;&gt;&lt;/a&gt;1 面试题描述&lt;/h2&gt;&lt;p&gt;运行如下代码，得到的结果：&lt;/p&gt;
+&lt;pre class=&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="面试" scheme="http://jiesheng88.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="Java基础" scheme="http://jiesheng88.github.io/categories/%E9%9D%A2%E8%AF%95/Java%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="面试" scheme="http://jiesheng88.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="Java基础" scheme="http://jiesheng88.github.io/tags/Java%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="内存分配" scheme="http://jiesheng88.github.io/tags/%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/"/>
+    
+  </entry>
   
   <entry>
     <title>【面试-MySQL】MySQL高级优化</title>
@@ -542,36 +644,6 @@
       <category term="线性回归" scheme="http://jiesheng88.github.io/tags/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/"/>
     
       <category term="PM2.5预测" scheme="http://jiesheng88.github.io/tags/PM2-5%E9%A2%84%E6%B5%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>博客搭建</title>
-    <link href="http://jiesheng88.github.io/2020/04/10/bo-ke-da-jian/"/>
-    <id>http://jiesheng88.github.io/2020/04/10/bo-ke-da-jian/</id>
-    <published>2020-04-10T01:25:00.000Z</published>
-    <updated>2021-03-12T10:41:17.856Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&amp;emsp;通过 GitHub + hexo 来搭建个人博客！！&lt;/p&gt;
-&lt;p&gt;参考链接：&lt;/p&gt;
-&lt;p&gt;&amp;emsp;1.超全面！如何用 GitHub 从零开始搭建一个博客 ？&lt;/p&gt;
-&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="博客" scheme="http://jiesheng88.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
-    
-    
-      <category term="博客搭建" scheme="http://jiesheng88.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
   </entry>
   
