@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://jiesheng88.github.io/"/>
-  <updated>2021-06-01T02:28:26.654Z</updated>
+  <updated>2021-06-17T08:30:45.572Z</updated>
   <id>http://jiesheng88.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>【面试-Java】类和实例的初始化过程</title>
-    <link href="http://jiesheng88.github.io/2021/05/21/mian-shi-java-lei-he-shi-li-de-chu-shi-hua-guo-cheng/"/>
-    <id>http://jiesheng88.github.io/2021/05/21/mian-shi-java-lei-he-shi-li-de-chu-shi-hua-guo-cheng/</id>
-    <published>2021-05-21T13:02:48.000Z</published>
-    <updated>2021-06-01T02:28:26.654Z</updated>
+    <title>【面试-Java】HashMap底层原理</title>
+    <link href="http://jiesheng88.github.io/2021/06/17/mian-shi-java-hashmap-di-ceng-yuan-li/"/>
+    <id>http://jiesheng88.github.io/2021/06/17/mian-shi-java-hashmap-di-ceng-yuan-li/</id>
+    <published>2021-06-17T08:18:18.000Z</published>
+    <updated>2021-06-17T08:30:45.572Z</updated>
     
     <summary type="html">
     
@@ -29,8 +29,119 @@
       
         
         
-          &lt;h2 id=&quot;1-面试题描述&quot;&gt;&lt;a href=&quot;#1-面试题描述&quot; class=&quot;headerlink&quot; title=&quot;1 面试题描述&quot;&gt;&lt;/a&gt;1 面试题描述&lt;/h2&gt;&lt;p&gt;以下代码，运行结果&lt;/p&gt;
-&lt;pre class=&quot; language-java&quot;&gt;&lt;code
+          &lt;h2 id=&quot;HashMap-底层原理&quot;&gt;&lt;a href=&quot;#HashMap-底层原理&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="面试" scheme="http://jiesheng88.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="Java" scheme="http://jiesheng88.github.io/categories/%E9%9D%A2%E8%AF%95/Java/"/>
+    
+    
+      <category term="面试" scheme="http://jiesheng88.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="Java" scheme="http://jiesheng88.github.io/tags/Java/"/>
+    
+      <category term="HashMap底层原理" scheme="http://jiesheng88.github.io/tags/HashMap%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【面试-JUC】多线程JUC</title>
+    <link href="http://jiesheng88.github.io/2021/06/15/mian-shi-juc-duo-xian-cheng-juc/"/>
+    <id>http://jiesheng88.github.io/2021/06/15/mian-shi-juc-duo-xian-cheng-juc/</id>
+    <published>2021-06-15T08:11:01.000Z</published>
+    <updated>2021-06-17T08:28:12.003Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;p&gt;&lt;font color=&#39;red&#39;&gt;多线程口诀要点&lt;/font&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;线程    操作    资源类&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;判断    工作   
+        
+      
+    
+    </summary>
+    
+    
+      <category term="面试" scheme="http://jiesheng88.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="Java" scheme="http://jiesheng88.github.io/categories/%E9%9D%A2%E8%AF%95/Java/"/>
+    
+    
+      <category term="面试" scheme="http://jiesheng88.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="Java" scheme="http://jiesheng88.github.io/tags/Java/"/>
+    
+      <category term="多线程JUC" scheme="http://jiesheng88.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8BJUC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【JVM】字节码指令表</title>
+    <link href="http://jiesheng88.github.io/2021/06/10/jvm-zi-jie-ma-zhi-ling-biao/"/>
+    <id>http://jiesheng88.github.io/2021/06/10/jvm-zi-jie-ma-zhi-ling-biao/</id>
+    <published>2021-06-10T03:47:02.000Z</published>
+    <updated>2021-06-14T03:49:37.885Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;字节码&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;助记符&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;指令含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td
+        
+      
+    
+    </summary>
+    
+    
+      <category term="JVM" scheme="http://jiesheng88.github.io/categories/JVM/"/>
+    
+      <category term="字节码指令表" scheme="http://jiesheng88.github.io/categories/JVM/%E5%AD%97%E8%8A%82%E7%A0%81%E6%8C%87%E4%BB%A4%E8%A1%A8/"/>
+    
+    
+      <category term="JVM" scheme="http://jiesheng88.github.io/tags/JVM/"/>
+    
+      <category term="字节码指令表" scheme="http://jiesheng88.github.io/tags/%E5%AD%97%E8%8A%82%E7%A0%81%E6%8C%87%E4%BB%A4%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【面试-Java】单例设计模式</title>
+    <link href="http://jiesheng88.github.io/2021/06/03/mian-shi-java-dan-li-she-ji-mo-shi/"/>
+    <id>http://jiesheng88.github.io/2021/06/03/mian-shi-java-dan-li-she-ji-mo-shi/</id>
+    <published>2021-06-03T02:58:34.000Z</published>
+    <updated>2021-06-02T07:48:37.007Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-面试试题&quot;&gt;&lt;a href=&quot;#1-面试试题&quot; class=&quot;headerlink&quot; title=&quot;1 面试试题&quot;&gt;&lt;/a&gt;1 面试试题&lt;/h2&gt;&lt;p&gt;写一个Singleton示例&lt;/p&gt;
+&lt;h2 id=&quot;2-单例设计模式简介&quot;&gt;&lt;a
         
       
     
@@ -46,16 +157,49 @@
     
       <category term="Java基础" scheme="http://jiesheng88.github.io/tags/Java%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="类和实例的初始化过程" scheme="http://jiesheng88.github.io/tags/%E7%B1%BB%E5%92%8C%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E8%BF%87%E7%A8%8B/"/>
+      <category term="单例设计模式" scheme="http://jiesheng88.github.io/tags/%E5%8D%95%E4%BE%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【面试-Java】方法传参机制</title>
+    <link href="http://jiesheng88.github.io/2021/06/02/mian-shi-java-fang-fa-chuan-can-ji-zhi/"/>
+    <id>http://jiesheng88.github.io/2021/06/02/mian-shi-java-fang-fa-chuan-can-ji-zhi/</id>
+    <published>2021-06-02T02:15:34.000Z</published>
+    <updated>2021-06-02T02:52:17.048Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-面试试题&quot;&gt;&lt;a href=&quot;#1-面试试题&quot; class=&quot;headerlink&quot; title=&quot;1 面试试题&quot;&gt;&lt;/a&gt;1 面试试题&lt;/h2&gt;&lt;pre class=&quot; language-java&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+    
+      <category term="面试" scheme="http://jiesheng88.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="Java基础" scheme="http://jiesheng88.github.io/categories/%E9%9D%A2%E8%AF%95/Java%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="面试" scheme="http://jiesheng88.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="Java基础" scheme="http://jiesheng88.github.io/tags/Java%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="方法传参机制" scheme="http://jiesheng88.github.io/tags/%E6%96%B9%E6%B3%95%E4%BC%A0%E5%8F%82%E6%9C%BA%E5%88%B6/"/>
     
   </entry>
   
   <entry>
     <title>【面试-Java】成员变量和局部变量</title>
-    <link href="http://jiesheng88.github.io/2021/05/18/mian-shi-java-cheng-yuan-bian-liang-he-ju-bu-bian-liang/"/>
-    <id>http://jiesheng88.github.io/2021/05/18/mian-shi-java-cheng-yuan-bian-liang-he-ju-bu-bian-liang/</id>
-    <published>2021-05-18T12:02:10.000Z</published>
-    <updated>2021-05-28T12:51:45.435Z</updated>
+    <link href="http://jiesheng88.github.io/2021/05/21/mian-shi-java-cheng-yuan-bian-liang-he-ju-bu-bian-liang/"/>
+    <id>http://jiesheng88.github.io/2021/05/21/mian-shi-java-cheng-yuan-bian-liang-he-ju-bu-bian-liang/</id>
+    <published>2021-05-21T12:02:10.000Z</published>
+    <updated>2021-06-02T01:32:16.455Z</updated>
     
     <summary type="html">
     
@@ -81,6 +225,40 @@
       <category term="Java基础" scheme="http://jiesheng88.github.io/tags/Java%E5%9F%BA%E7%A1%80/"/>
     
       <category term="成员变量与局部变量" scheme="http://jiesheng88.github.io/tags/%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【面试-Java】类和实例的初始化过程</title>
+    <link href="http://jiesheng88.github.io/2021/05/18/mian-shi-java-lei-he-shi-li-de-chu-shi-hua-guo-cheng/"/>
+    <id>http://jiesheng88.github.io/2021/05/18/mian-shi-java-lei-he-shi-li-de-chu-shi-hua-guo-cheng/</id>
+    <published>2021-05-18T13:02:48.000Z</published>
+    <updated>2021-06-02T01:07:04.256Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-面试题描述&quot;&gt;&lt;a href=&quot;#1-面试题描述&quot; class=&quot;headerlink&quot; title=&quot;1 面试题描述&quot;&gt;&lt;/a&gt;1 面试题描述&lt;/h2&gt;&lt;p&gt;以下代码，运行结果&lt;/p&gt;
+&lt;pre class=&quot; language-java&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+    
+      <category term="面试" scheme="http://jiesheng88.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="Java基础" scheme="http://jiesheng88.github.io/categories/%E9%9D%A2%E8%AF%95/Java%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="面试" scheme="http://jiesheng88.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="Java基础" scheme="http://jiesheng88.github.io/tags/Java%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="类和实例的初始化过程" scheme="http://jiesheng88.github.io/tags/%E7%B1%BB%E5%92%8C%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E8%BF%87%E7%A8%8B/"/>
     
   </entry>
   
@@ -494,156 +672,6 @@
     
     
       <category term="爬虫" scheme="http://jiesheng88.github.io/tags/%E7%88%AC%E8%99%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【作业二】逻辑回归-收入分类</title>
-    <link href="http://jiesheng88.github.io/2020/04/22/zuo-ye-er-luo-ji-hui-gui-shou-ru-fen-lei/"/>
-    <id>http://jiesheng88.github.io/2020/04/22/zuo-ye-er-luo-ji-hui-gui-shou-ru-fen-lei/</id>
-    <published>2020-04-22T13:05:07.000Z</published>
-    <updated>2020-04-22T13:59:00.034Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;一、作业要求&quot;&gt;&lt;a href=&quot;#一、作业要求&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="机器学习" scheme="http://jiesheng88.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="机器学习" scheme="http://jiesheng88.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="逻辑回归" scheme="http://jiesheng88.github.io/tags/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/"/>
-    
-      <category term="概率生成模型" scheme="http://jiesheng88.github.io/tags/%E6%A6%82%E7%8E%87%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【数据结构-二分法】二分搜索法</title>
-    <link href="http://jiesheng88.github.io/2020/04/18/shu-ju-jie-gou-er-fen-fa-er-fen-sou-suo-fa/"/>
-    <id>http://jiesheng88.github.io/2020/04/18/shu-ju-jie-gou-er-fen-fa-er-fen-sou-suo-fa/</id>
-    <published>2020-04-18T03:10:50.000Z</published>
-    <updated>2020-07-26T14:32:14.894Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;1-二分搜索法定义&quot;&gt;&lt;a href=&quot;#1-二分搜索法定义&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="二分法" scheme="http://jiesheng88.github.io/categories/%E4%BA%8C%E5%88%86%E6%B3%95/"/>
-    
-    
-      <category term="数据结构" scheme="http://jiesheng88.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-      <category term="二分法" scheme="http://jiesheng88.github.io/tags/%E4%BA%8C%E5%88%86%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【数据结构-数组】LeetCode 第 41 号问题：缺失的第一个正数</title>
-    <link href="http://jiesheng88.github.io/2020/04/17/shu-ju-jie-gou-shu-zu-leetcode-di-41-hao-wen-ti-que-shi-de-di-yi-ge-zheng-shu/"/>
-    <id>http://jiesheng88.github.io/2020/04/17/shu-ju-jie-gou-shu-zu-leetcode-di-41-hao-wen-ti-que-shi-de-di-yi-ge-zheng-shu/</id>
-    <published>2020-04-17T08:42:33.000Z</published>
-    <updated>2020-04-17T12:24:47.517Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;1-题目描述&quot;&gt;&lt;a href=&quot;#1-题目描述&quot; class=&quot;headerlink&quot; title=&quot;1.题目描述&quot;&gt;&lt;/a&gt;1.题目描述&lt;/h3&gt;&lt;p&gt;&amp;emsp;&amp;emsp;给定一个未排序的整数数组，找出其中没有出现的最小的正整数。&lt;/p&gt;
-&lt;p&gt;&lt;img
-        
-      
-    
-    </summary>
-    
-    
-      <category term="数组" scheme="http://jiesheng88.github.io/categories/%E6%95%B0%E7%BB%84/"/>
-    
-    
-      <category term="数据结构" scheme="http://jiesheng88.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-      <category term="数组" scheme="http://jiesheng88.github.io/tags/%E6%95%B0%E7%BB%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【数据结构-数组】如何高效对有序数组/链表去重？</title>
-    <link href="http://jiesheng88.github.io/2020/04/15/shu-ju-jie-gou-shu-zu-shu-zu-ji-qiao/"/>
-    <id>http://jiesheng88.github.io/2020/04/15/shu-ju-jie-gou-shu-zu-shu-zu-ji-qiao/</id>
-    <published>2020-04-15T03:38:11.000Z</published>
-    <updated>2021-04-13T07:07:53.716Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;1-数组简介&quot;&gt;&lt;a href=&quot;#1-数组简介&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="数组" scheme="http://jiesheng88.github.io/categories/%E6%95%B0%E7%BB%84/"/>
-    
-    
-      <category term="数据结构" scheme="http://jiesheng88.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-      <category term="数组" scheme="http://jiesheng88.github.io/tags/%E6%95%B0%E7%BB%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【作业一】线性回归-PM2.5预测</title>
-    <link href="http://jiesheng88.github.io/2020/04/13/zuo-ye-yi-xian-xing-hui-gui-pm2.5-yu-ce/"/>
-    <id>http://jiesheng88.github.io/2020/04/13/zuo-ye-yi-xian-xing-hui-gui-pm2.5-yu-ce/</id>
-    <published>2020-04-13T07:14:23.000Z</published>
-    <updated>2020-04-19T13:11:51.049Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;一、作业说明及数据获取&quot;&gt;&lt;a href=&quot;#一、作业说明及数据获取&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="机器学习" scheme="http://jiesheng88.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="机器学习" scheme="http://jiesheng88.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="线性回归" scheme="http://jiesheng88.github.io/tags/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/"/>
-    
-      <category term="PM2.5预测" scheme="http://jiesheng88.github.io/tags/PM2-5%E9%A2%84%E6%B5%8B/"/>
     
   </entry>
   

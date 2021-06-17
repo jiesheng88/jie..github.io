@@ -7,14 +7,11 @@
     <meta name="keywords" content="【面试-Java】成员变量和局部变量, Java,Python,C,C++, Java开发, 深度学习, 服务研发">
     <meta name="description" content="1 面试题描述以下代码运行后所得结果
 /**
- * 成员变量与成员变量的区别
+ * 局部变量与成员变量的区别
  */
 public class Variables {
-    static int s;
-    int i;
-    int j;
-    {
-      ">
+    static int s;        // 静态变量
+    int i;         ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -426,7 +423,7 @@ public class Variables {
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-18
+                    2021-05-21
                 </div>
 
                 
@@ -444,21 +441,21 @@ public class Variables {
             <div id="articleContent">
                 <h2 id="1-面试题描述"><a href="#1-面试题描述" class="headerlink" title="1 面试题描述"></a>1 面试题描述</h2><p>以下代码运行后所得结果</p>
 <pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
- * 成员变量与成员变量的区别
+ * 局部变量与成员变量的区别
  */</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Variables</span> <span class="token punctuation">{</span>
-    <span class="token keyword">static</span> <span class="token keyword">int</span> s<span class="token punctuation">;</span>
-    <span class="token keyword">int</span> i<span class="token punctuation">;</span>
-    <span class="token keyword">int</span> j<span class="token punctuation">;</span>
+    <span class="token keyword">static</span> <span class="token keyword">int</span> s<span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">// 静态变量</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">;</span>                <span class="token comment" spellcheck="true">// 实例变量</span>
+    <span class="token keyword">int</span> j<span class="token punctuation">;</span>                <span class="token comment" spellcheck="true">// 实例变量</span>
     <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        i<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">// 局部变量</span>
+        i<span class="token operator">++</span><span class="token punctuation">;</span>            <span class="token comment" spellcheck="true">// 就近原则，局部变量i</span>
         j<span class="token operator">++</span><span class="token punctuation">;</span>
         s<span class="token operator">++</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token comment" spellcheck="true">// int j j 也是个局部变量</span>
         i<span class="token operator">++</span><span class="token punctuation">;</span>
-        j<span class="token operator">++</span><span class="token punctuation">;</span>
+        j<span class="token operator">++</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">// 就近原则</span>
         s<span class="token operator">++</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 
@@ -559,6 +556,22 @@ public class Variables {
 <p>② 局部变量与类变量重名</p>
 <ul>
 <li>在<font color='red'>类变量前面加 “类名.”</font></li>
+</ul>
+<h2 id="5-试题解析"><a href="#5-试题解析" class="headerlink" title="5 试题解析"></a>5 试题解析</h2><p><img src="https://gitee.com/jiesheng8888/imgs/raw/master/PicGoImgs/20210602092410.png" alt="不同变量的内存图"></p>
+<p><strong><em>tips：</em></strong></p>
+<ul>
+<li><p><font color='red'>静态变量</font>是属于类的，是要存放在<font color='red'>方法区</font>中。</p>
+</li>
+<li><p><font color='red'>实例变量</font>是属于对象的，是要存放在<font color='red'>堆</font>中。</p>
+</li>
+<li><p><font color='red'>局部变量</font>是属于方法的，是要存放在<font color='red'>局部变量表</font>中。</p>
+</li>
+<li><p>一个<font color='red'>方法的参数、方法内定义的变量</font>是存放在虚拟机栈中的<font color='red'>局部变量表</font>。</p>
+</li>
+<li><p><font color='red'>方法内的参数都遵循就近原则</font>，后序操作都是针对最近的那个参数进行的。</p>
+</li>
+<li><p>一个<font color='red'>方法的参数、方法内定义的变量</font>，生命周期<font color='red'>仅局限于本方法内</font>，若无return传递出去，则仅在<font color='red'>局部变量表中自生自灭</font>。</p>
+</li>
 </ul>
 
             </div>
@@ -700,7 +713,7 @@ public class Variables {
                     </span>
                     <a href="http://jiesheng88.github.io" class="b-link-green">橙墟园A杰</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2021/05/18/mian-shi-java-cheng-yuan-bian-liang-he-ju-bu-bian-liang/" class="b-link-green">【面试-Java】成员变量和局部变量</a>
+                    <a href="/2021/05/21/mian-shi-java-cheng-yuan-bian-liang-he-ju-bu-bian-liang/" class="b-link-green">【面试-Java】成员变量和局部变量</a>
                 </p>
             </div>
         </div>
@@ -725,7 +738,66 @@ public class Variables {
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/05/21/mian-shi-java-lei-he-shi-li-de-chu-shi-hua-guo-cheng/">
+                <a href="/2021/06/02/mian-shi-java-fang-fa-chuan-can-ji-zhi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="【面试-Java】方法传参机制">
+                        
+                        <span class="card-title">【面试-Java】方法传参机制</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">1 面试试题public class MethodVariables {
+    public static void main(String[] args) {
+        int i = 1;                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-06-02
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E9%9D%A2%E8%AF%95/" class="post-category" target="_blank">
+                                    面试
+                                </a>
+                            
+                            <a href="/categories/%E9%9D%A2%E8%AF%95/Java%E5%9F%BA%E7%A1%80/" class="post-category" target="_blank">
+                                    Java基础
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%9D%A2%E8%AF%95/" target="_blank">
+                        <span class="chip bg-color">面试</span>
+                    </a>
+                    
+                    <a href="/tags/Java%E5%9F%BA%E7%A1%80/" target="_blank">
+                        <span class="chip bg-color">Java基础</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%96%B9%E6%B3%95%E4%BC%A0%E5%8F%82%E6%9C%BA%E5%88%B6/" target="_blank">
+                        <span class="chip bg-color">方法传参机制</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/05/18/mian-shi-java-lei-he-shi-li-de-chu-shi-hua-guo-cheng/">
                     <div class="card-image">
                         
                         
@@ -740,9 +812,9 @@ public class Father {
     private int i = test();                // 实例变量    
     private static int j =</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-05-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-05-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -772,68 +844,6 @@ public class Father {
                     
                     <a href="/tags/%E7%B1%BB%E5%92%8C%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E8%BF%87%E7%A8%8B/" target="_blank">
                         <span class="chip bg-color">类和实例的初始化过程</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/05/06/mian-shi-java-i-yu-i-de-qu-bie/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="【面试-Java】i++与++i的区别">
-                        
-                        <span class="card-title">【面试-Java】i++与++i的区别</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary">1 面试题描述运行如下代码，得到的结果：
-/**
- * 体会 i++ 与 ++i 在内存中的运行不同
- */
-public class Iaddadd {
-    public static void main(String[] args)</div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-05-06
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E9%9D%A2%E8%AF%95/" class="post-category" target="_blank">
-                                    面试
-                                </a>
-                            
-                            <a href="/categories/%E9%9D%A2%E8%AF%95/Java%E5%9F%BA%E7%A1%80/" class="post-category" target="_blank">
-                                    Java基础
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E9%9D%A2%E8%AF%95/" target="_blank">
-                        <span class="chip bg-color">面试</span>
-                    </a>
-                    
-                    <a href="/tags/Java%E5%9F%BA%E7%A1%80/" target="_blank">
-                        <span class="chip bg-color">Java基础</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/" target="_blank">
-                        <span class="chip bg-color">内存分配</span>
                     </a>
                     
                 </div>

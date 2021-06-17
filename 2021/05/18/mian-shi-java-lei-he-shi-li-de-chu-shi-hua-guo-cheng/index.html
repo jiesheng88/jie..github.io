@@ -420,7 +420,7 @@ public class Father {
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-21
+                    2021-05-18
                 </div>
 
                 
@@ -505,13 +505,12 @@ public class Father {
 <li>虚拟机什么时候才会加载Class文件并初始化类呢？（<font color='red'>类加载和初始化时机</font>）</li>
 </ul>
 <ul>
-<li><p>虚拟机如何加载一个Class文件呢？（<font color='red'>Java类加载的方式：类加载器、双亲委派机制</font>，详见博文</p>
-<p>[]: <a href="http://blog.csdn.net/justloveyou_/article/details/72217806" target="_blank" rel="noopener">http://blog.csdn.net/justloveyou_/article/details/72217806</a>    “《深入理解Java类加载器(一)：Java类加载原理解析》）”</p>
-</li>
-<li><p>虚拟机加载一个Class文件要经历那些具体的步骤呢？（<font color='red'>类加载过程/步骤</font>）</p>
-</li>
+<li>虚拟机如何加载一个Class文件呢？（<font color='red'>Java类加载的方式：类加载器、双亲委派机制</font>，详见博文</li>
 </ul>
-<h3 id="3-1-类加载和初始化时机"><a href="#3-1-类加载和初始化时机" class="headerlink" title="3.1 类加载和初始化时机"></a>3.1 类加载和初始化时机</h3><p>Java类从被加载到虚拟机内存中开始，到卸载出内存为止，它的整个生命周期包括：<font color='blue'>加载（Loading）、验证（Verification）、准备(Preparation)、解析(Resolution)、初始化(Initialization)、使用(Using) 和 卸载(Unloading)七个阶段</font>。其中准备、验证、解析3个部分统称为链接（Linking）。<br><img src="C:/Users/jie/AppData/Roaming/Typora/typora-user-images/image-20210531195215696.png" alt="类加载子系统" style="zoom:80%;" /></p>
+<ul>
+<li>虚拟机加载一个Class文件要经历那些具体的步骤呢？（<font color='red'>类加载过程/步骤</font>）</li>
+</ul>
+<h3 id="3-1-类加载和初始化时机"><a href="#3-1-类加载和初始化时机" class="headerlink" title="3.1 类加载和初始化时机"></a>3.1 类加载和初始化时机</h3><p>Java类从被加载到虚拟机内存中开始，到卸载出内存为止，它的整个生命周期包括：<font color='blue'>加载（Loading）、验证（Verification）、准备(Preparation)、解析(Resolution)、初始化(Initialization)、使用(Using) 和 卸载(Unloading)七个阶段</font>。其中准备、验证、解析3个部分统称为链接（Linking）。<br><img src="https://gitee.com/jiesheng8888/imgs/raw/master/PicGoImgs/20210602090417.png" alt="类加载子系统" style="zoom:80%;" /></p>
 <blockquote>
 <p>类初始化时机</p>
 </blockquote>
@@ -1200,7 +1199,7 @@ a<span class="token operator">=</span><span class="token number">110</span><span
                     </span>
                     <a href="http://jiesheng88.github.io" class="b-link-green">橙墟园A杰</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2021/05/21/mian-shi-java-lei-he-shi-li-de-chu-shi-hua-guo-cheng/" class="b-link-green">【面试-Java】类和实例的初始化过程</a>
+                    <a href="/2021/05/18/mian-shi-java-lei-he-shi-li-de-chu-shi-hua-guo-cheng/" class="b-link-green">【面试-Java】类和实例的初始化过程</a>
                 </p>
             </div>
         </div>
@@ -1221,73 +1220,11 @@ a<span class="token operator">=</span><span class="token number">110</span><span
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
-            <div class="card">
-                <a href="/2021/05/21/mian-shi-java-lei-he-shi-li-de-chu-shi-hua-guo-cheng/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="【面试-Java】类和实例的初始化过程">
-                        
-                        <span class="card-title">【面试-Java】类和实例的初始化过程</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary">1 面试题描述以下代码，运行结果
-public class Father {
-    private int i = test();                // 实例变量    
-    private static int j =</div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-05-21
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E9%9D%A2%E8%AF%95/" class="post-category" target="_blank">
-                                    面试
-                                </a>
-                            
-                            <a href="/categories/%E9%9D%A2%E8%AF%95/Java%E5%9F%BA%E7%A1%80/" class="post-category" target="_blank">
-                                    Java基础
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E9%9D%A2%E8%AF%95/" target="_blank">
-                        <span class="chip bg-color">面试</span>
-                    </a>
-                    
-                    <a href="/tags/Java%E5%9F%BA%E7%A1%80/" target="_blank">
-                        <span class="chip bg-color">Java基础</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%B1%BB%E5%92%8C%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E8%BF%87%E7%A8%8B/" target="_blank">
-                        <span class="chip bg-color">类和实例的初始化过程</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/05/18/mian-shi-java-cheng-yuan-bian-liang-he-ju-bu-bian-liang/">
+                <a href="/2021/05/21/mian-shi-java-cheng-yuan-bian-liang-he-ju-bu-bian-liang/">
                     <div class="card-image">
                         
                         
@@ -1299,18 +1236,15 @@ public class Father {
                 <div class="card-content article-content">
                     <div class="summary">1 面试题描述以下代码运行后所得结果
 /**
- * 成员变量与成员变量的区别
+ * 局部变量与成员变量的区别
  */
 public class Variables {
-    static int s;
-    int i;
-    int j;
-    {
-      </div>
+    static int s;        // 静态变量
+    int i;         </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-05-18
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-05-21
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1340,6 +1274,68 @@ public class Variables {
                     
                     <a href="/tags/%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F/" target="_blank">
                         <span class="chip bg-color">成员变量与局部变量</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/05/06/mian-shi-java-i-yu-i-de-qu-bie/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="【面试-Java】i++与++i的区别">
+                        
+                        <span class="card-title">【面试-Java】i++与++i的区别</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">1 面试题描述运行如下代码，得到的结果：
+/**
+ * 体会 i++ 与 ++i 在内存中的运行不同
+ */
+public class Iaddadd {
+    public static void main(String[] args)</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-05-06
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E9%9D%A2%E8%AF%95/" class="post-category" target="_blank">
+                                    面试
+                                </a>
+                            
+                            <a href="/categories/%E9%9D%A2%E8%AF%95/Java%E5%9F%BA%E7%A1%80/" class="post-category" target="_blank">
+                                    Java基础
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%9D%A2%E8%AF%95/" target="_blank">
+                        <span class="chip bg-color">面试</span>
+                    </a>
+                    
+                    <a href="/tags/Java%E5%9F%BA%E7%A1%80/" target="_blank">
+                        <span class="chip bg-color">Java基础</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/" target="_blank">
+                        <span class="chip bg-color">内存分配</span>
                     </a>
                     
                 </div>
