@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="搜索技巧, Java,Python,C,C++, Java开发, 深度学习, 服务研发">
-    <meta name="description" content="一、谷歌搜索
+    <meta name="description" content="1 谷歌搜索
 双引号：精确匹配
 
 OR：或者。包含一个关键字即可
@@ -404,6 +404,10 @@ define：查询词汇的定义
                                 <span class="chip bg-color">谷歌</span>
                             </a>
                         
+                            <a href="/tags/GitHub/" target="_blank">
+                                <span class="chip bg-color">GitHub</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -416,8 +420,8 @@ define：查询词汇的定义
                                 搜索技巧
                             </a>
                         
-                            <a href="/categories/%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7/%E8%B0%B7%E6%AD%8C/" class="post-category" target="_blank">
-                                谷歌
+                            <a href="/categories/%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7/GitHub/" class="post-category" target="_blank">
+                                GitHub
                             </a>
                         
                     </div>
@@ -444,7 +448,7 @@ define：查询词汇的定义
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一、谷歌搜索"><a href="#一、谷歌搜索" class="headerlink" title="一、谷歌搜索"></a>一、谷歌搜索</h2><ol>
+                <h2 id="1-谷歌搜索"><a href="#1-谷歌搜索" class="headerlink" title="1 谷歌搜索"></a>1 谷歌搜索</h2><ol>
 <li><p><font color=#FF0000 >双引号</font>：精确匹配</p>
 </li>
 <li><p>OR：或者。包含一个关键字即可</p>
@@ -490,43 +494,120 @@ define：查询词汇的定义
 <p>in：算汇率</p>
 </li>
 </ol>
-<h2 id="二、GitHub搜索"><a href="#二、GitHub搜索" class="headerlink" title="二、GitHub搜索"></a>二、GitHub搜索</h2><ol>
-<li><strong>明确搜索仓库标题、仓库描述、README</strong><ol>
-<li>仓库标题中包含关键字：<strong>in:name</strong> 关键词</li>
-<li>仓库描述中包含关键字：<strong>in:descripton</strong> 关键词</li>
-<li>README文件中包含关键字：<strong>in:readme</strong> 关键词</li>
-</ol>
+<h2 id="2-GitHub搜索"><a href="#2-GitHub搜索" class="headerlink" title="2 GitHub搜索"></a>2 GitHub搜索</h2><h3 id="2-1-常用词含义"><a href="#2-1-常用词含义" class="headerlink" title="2.1 常用词含义"></a>2.1 常用词含义</h3><ul>
+<li><code>watch</code>：会持续收到该项目的动态</li>
+<li><code>fork</code>：复制某个仓库到自己的GitHub仓库中</li>
+<li><code>star</code>：可以理解为点赞</li>
+<li><code>clone</code>：将项目下载到本地</li>
+<li><code>follow</code>：关注你感兴趣的作者，会受到他们的动态</li>
+</ul>
+<h3 id="2-2-in-关键字限制搜索范围"><a href="#2-2-in-关键字限制搜索范围" class="headerlink" title="2.2 in 关键字限制搜索范围"></a>2.2 in 关键字限制搜索范围</h3><ul>
+<li><p><font color='red'>公式：XXX（关键字）<code>in:name</code> 或 <code>in:description</code> 或 <code>in:readme</code></font></p>
 </li>
-<li><strong>明确搜索 star、fork 数大于多少的</strong><ol>
-<li>stars: <strong>&gt;</strong> 数字 关键字。比如：stars:&gt;3000 spring cloud</li>
-<li>fork: <strong>&gt;</strong> 数字 关键字</li>
-</ol>
+<li><p>xxx in:name            仓库标题中包含xxx关键字的</p>
 </li>
-<li><strong>明确搜索仓库大小的</strong><ol>
-<li>size:&gt;=5000(单位是k) 关键词</li>
-</ol>
+<li><p>xxx in:description  仓库描述中包含xxx关键字的</p>
 </li>
-<li><strong>明确仓库是否还在更新维护</strong><ol>
-<li>直接指定<strong>更新时间</strong>在哪个时间前或后的： pushed:&gt;2019-01-03 spring cloud</li>
-</ol>
+<li><p>xxx in:readme        项目的readme文件中包含xxx关键字的</p>
 </li>
-<li><strong>明确搜索仓库的 LICENSE</strong><ol>
-<li>要找协议是最为宽松的 Apache License 2 的代码，可以这样：license:apache-2.0 spring cloud</li>
-</ol>
+<li><p>组合使用，中间用 , 隔开</p>
+<ul>
+<li>xxx  in:name,readme    </li>
+</ul>
+<img src="https://gitee.com/jiesheng8888/imgs/raw/master/PicGoImgs/20210618104701.png" style="zoom:80%;" />
+
 </li>
-<li><strong>明确搜索仓库的语言</strong><ol>
-<li><strong>language</strong>:java 关键词</li>
-</ol>
+</ul>
+<h3 id="2-3-stars或forks数量关键字查找"><a href="#2-3-stars或forks数量关键字查找" class="headerlink" title="2.3  stars或forks数量关键字查找"></a>2.3  stars或forks数量关键字查找</h3><ul>
+<li><p>公式：</p>
+<ul>
+<li><font color='red'>xxx（关键字） <code>stars:&gt;数字</code>（或是<code>stars:&gt;=数字</code>）</font></li>
+<li><font color='red'>区间范围关键字：<code>stars:数字1..数字2</code></font></li>
+</ul>
 </li>
-<li><strong>明确搜索某个人或组织的仓库</strong><ol>
-<li>找某个人的代码：<strong>user</strong>:joshlong</li>
-<li>多个查询之间「空格」分隔：<strong>user</strong>:joshlong <strong>language</strong>:java</li>
-<li>找某个组织的代码：<strong>org</strong>:spring-cloud</li>
-</ol>
+<li><p>组合使用，用空格隔开</p>
 </li>
-</ol>
-<p><strong>注意</strong>：</p>
-<p>(1) <strong>冒号两侧不能有空格</strong>；</p>
+<li><p>案例</p>
+<ul>
+<li><p>查找stars数大于等于5000的Springboot项目</p>
+<img src="https://gitee.com/jiesheng8888/imgs/raw/master/PicGoImgs/20210618105405.png" style="zoom:67%;" />
+</li>
+<li><p>查找forks数在1000~2000之间的springboot项目</p>
+<img src="https://gitee.com/jiesheng8888/imgs/raw/master/PicGoImgs/20210618105528.png" style="zoom:67%;" />
+</li>
+<li><p>查找star大于1000，fork数在500到1000的springboot项目</p>
+<img src="https://gitee.com/jiesheng8888/imgs/raw/master/PicGoImgs/20210618105704.png" style="zoom:67%;" />
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-4-awesome加强搜索"><a href="#2-4-awesome加强搜索" class="headerlink" title="2.4  awesome加强搜索"></a>2.4  awesome加强搜索</h3><ul>
+<li><p><font color='red'>公式：<code>awesome  关键字</code> ：awesome系列，一般用来收集学习、工具、书籍类相关的项目</font></p>
+</li>
+<li><p>案例</p>
+<ul>
+<li><p>搜索优秀的redis相关的项目，包括框架，教程等 </p>
+<img src="https://gitee.com/jiesheng8888/imgs/raw/master/PicGoImgs/20210618110011.png" style="zoom:67%;" />
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-5-高亮显示某行代码"><a href="#2-5-高亮显示某行代码" class="headerlink" title="2.5 高亮显示某行代码"></a>2.5 高亮显示某行代码</h3><ul>
+<li><p><font color='red'>高亮显示一行：地址后面紧跟 #L行号</font></p>
+<ul>
+<li><p>比如高亮显示下面找到的代码的第 17 行</p>
+<img src="https://gitee.com/jiesheng8888/imgs/raw/master/PicGoImgs/20210618110649.png" style="zoom:67%;" />
+</li>
+<li><p>需要复制上方的网址，然后再网址后面加上#L17</p>
+<img src="https://gitee.com/jiesheng8888/imgs/raw/master/PicGoImgs/20210618110838.png" alt="" style="zoom:80%;" />
+</li>
+</ul>
+</li>
+<li><p><font color='red'>高亮显示多行：地址后面紧跟#L行号1-L行号2</font></p>
+<ul>
+<li><p>比如高亮显示上面找到的代码的第 17 行到第 30 行</p>
+<img src="https://gitee.com/jiesheng8888/imgs/raw/master/PicGoImgs/20210618111218.png" style="zoom:80%;" />
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-6-项目内搜索"><a href="#2-6-项目内搜索" class="headerlink" title="2.6 项目内搜索"></a>2.6 项目内搜索</h3><ul>
+<li><p>在仓库首页，按下英文字母 <code>t</code> ,开启项目内搜索</p>
+<img src="https://gitee.com/jiesheng8888/imgs/raw/master/PicGoImgs/20210618111353.png" style="zoom:67%;" />
+</li>
+<li><p>浏览器安装Octotree插件</p>
+<img src="https://gitee.com/jiesheng8888/imgs/raw/master/PicGoImgs/20210618111451.png" style="zoom:67%;" />
+
+</li>
+</ul>
+<h3 id="2-7-搜索某个地区内的大佬"><a href="#2-7-搜索某个地区内的大佬" class="headerlink" title="2.7  搜索某个地区内的大佬"></a>2.7  搜索某个地区内的大佬</h3><ul>
+<li>location：地区</li>
+<li>language：语言</li>
+<li>例如：<code>location:wuhan language:java</code></li>
+</ul>
+<img src="https://gitee.com/jiesheng8888/imgs/raw/master/PicGoImgs/20210618111719.png" style="zoom:67%;" />
+
+<h3 id="2-8-其他"><a href="#2-8-其他" class="headerlink" title="2.8 其他"></a>2.8 其他</h3><h4 id="2-8-1-明确搜索仓库大小的"><a href="#2-8-1-明确搜索仓库大小的" class="headerlink" title="2.8.1 明确搜索仓库大小的"></a>2.8.1 明确搜索仓库大小的</h4><ul>
+<li>公式：<font color='red'>关键字 size:&gt;=5000(单位是k)</font></li>
+</ul>
+<h4 id="2-8-2-明确仓库是否还在更新维护"><a href="#2-8-2-明确仓库是否还在更新维护" class="headerlink" title="2.8.2 明确仓库是否还在更新维护"></a>2.8.2 明确仓库是否还在更新维护</h4><ul>
+<li>直接指定<strong>更新时间</strong>在哪个时间前或后的：<font color='red'>关键字 pushed:&gt;2021-01-03 </font></li>
+</ul>
+<h4 id="2-8-3-明确搜索仓库的-LICENSE"><a href="#2-8-3-明确搜索仓库的-LICENSE" class="headerlink" title="2.8.3 明确搜索仓库的 LICENSE"></a>2.8.3 明确搜索仓库的 LICENSE</h4><ul>
+<li>要找协议是最为宽松的 Apache License 2 的代码，可以这样：<font color='red'>关键字 license:apache-2.0</font></li>
+</ul>
+<h4 id="2-8-4-明确搜索某个人或组织的仓库"><a href="#2-8-4-明确搜索某个人或组织的仓库" class="headerlink" title="2.8.4 明确搜索某个人或组织的仓库"></a>2.8.4 明确搜索某个人或组织的仓库</h4><ul>
+<li><p><font color='red'>找某个人的代码：<strong>user</strong>:joshlong</font></p>
+</li>
+<li><p><font color='red'>多个查询之间「空格」分隔：<strong>user</strong>:joshlong <strong>language</strong>:java</font></p>
+</li>
+<li><p>找某个组织的代码：<strong>org</strong>:spring-cloud</p>
+</li>
+</ul>
+<h3 id="2-9-注意事项"><a href="#2-9-注意事项" class="headerlink" title="2.9 注意事项"></a>2.9 注意事项</h3><p>(1) <strong>冒号两侧不能有空格</strong>；</p>
 <p>(2) <strong>多个查询之间「空格」分隔</strong></p>
 <p>(3) <strong>不区分大小写</strong>；</p>
 <p>(4) <strong>不能将以下通配符用作搜索查询的一部分</strong>，<strong>搜索将忽略这些符号</strong>：. , : ; / \ ` ‘ “ = * ! ? # $ &amp; + ^ | ~ &lt; &gt; ( ) { } [ ]；</p>
