@@ -382,12 +382,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E9%9D%A2%E8%AF%95/" target="_blank">
-                                <span class="chip bg-color">面试</span>
-                            </a>
-                        
                             <a href="/tags/Java/" target="_blank">
                                 <span class="chip bg-color">Java</span>
+                            </a>
+                        
+                            <a href="/tags/%E9%9D%A2%E8%AF%95/" target="_blank">
+                                <span class="chip bg-color">面试</span>
                             </a>
                         
                             <a href="/tags/HashMap%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86/" target="_blank">
@@ -595,12 +595,12 @@
 
 <span class="token comment" spellcheck="true">/**
  * 实现Map.put和相关方法
- * @param hash  对key的hashcode进一步计算，确保散列均匀
- * @param key
- * @param value
- * @param onlyIfAbsent
- * @param evict
- * @return
+ * @param hash  对key的hashcode进一步计算，得到哈希值，确保散列均匀
+ * @param key    指定参数key
+ * @param value    指定参数value
+ * @param onlyIfAbsent    如果为true，即使指定参数key在map中已经存在，也不会替换value
+ * @param evict        如果为false，数组table在创建模式中
+ * @return    如果value被替换，则返回旧的value，否则返回null。当然，可能key对应的value就是null。
  */</span>
 <span class="token keyword">final</span> V <span class="token function">putVal</span><span class="token punctuation">(</span><span class="token keyword">int</span> hash<span class="token punctuation">,</span> K key<span class="token punctuation">,</span> V value<span class="token punctuation">,</span> <span class="token keyword">boolean</span> onlyIfAbsent<span class="token punctuation">,</span> <span class="token keyword">boolean</span> evict<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     Node<span class="token operator">&lt;</span>K<span class="token punctuation">,</span>V<span class="token operator">></span><span class="token punctuation">[</span><span class="token punctuation">]</span> tab<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 临时变量，存储Map的数组table</span>
@@ -1083,6 +1083,62 @@
 <span class="token punctuation">}</span></code></pre>
 </li>
 </ul>
+<h2 id="3-相关面试题"><a href="#3-相关面试题" class="headerlink" title="3 相关面试题"></a>3 相关面试题</h2><h3 id="3-1-如何实现HashMap的有序？"><a href="#3-1-如何实现HashMap的有序？" class="headerlink" title="3.1 如何实现HashMap的有序？"></a>3.1 如何实现HashMap的有序？</h3><p><strong><font color='red'>使用 <code>LinkedHashMap</code> 或是 <code>TreeMap</code>。</font></strong></p>
+<blockquote>
+<p>LinkedHashMap实现有序</p>
+</blockquote>
+<p><font color='red'><code>LinkedHashMap</code>内部维护了一个单链表，有头尾节点</font>，同时LinkedHashMap节点Entry内部<font color='red'>除了继承HashMap的Node属性，还有before 和 after用于标识前置节点和后置节点。可以实现按插入的顺序或访问顺序排序。</font></p>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * The head (eldest) of the doubly linked list.
+*/</span>
+<span class="token keyword">transient</span> LinkedHashMap<span class="token punctuation">.</span>Entry<span class="token operator">&lt;</span>K<span class="token punctuation">,</span>V<span class="token operator">></span> head<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">/**
+  * The tail (youngest) of the doubly linked list.
+*/</span>
+<span class="token keyword">transient</span> LinkedHashMap<span class="token punctuation">.</span>Entry<span class="token operator">&lt;</span>K<span class="token punctuation">,</span>V<span class="token operator">></span> tail<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//将加入的p节点添加到链表末尾</span>
+<span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">linkNodeLast</span><span class="token punctuation">(</span>LinkedHashMap<span class="token punctuation">.</span>Entry<span class="token operator">&lt;</span>K<span class="token punctuation">,</span>V<span class="token operator">></span> p<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  LinkedHashMap<span class="token punctuation">.</span>Entry<span class="token operator">&lt;</span>K<span class="token punctuation">,</span>V<span class="token operator">></span> last <span class="token operator">=</span> tail<span class="token punctuation">;</span>
+  tail <span class="token operator">=</span> p<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>last <span class="token operator">==</span> null<span class="token punctuation">)</span>
+    head <span class="token operator">=</span> p<span class="token punctuation">;</span>
+  <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    p<span class="token punctuation">.</span>before <span class="token operator">=</span> last<span class="token punctuation">;</span>
+    last<span class="token punctuation">.</span>after <span class="token operator">=</span> p<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//LinkedHashMap的节点类</span>
+<span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">Entry</span><span class="token operator">&lt;</span>K<span class="token punctuation">,</span>V<span class="token operator">></span> <span class="token keyword">extends</span> <span class="token class-name">HashMap<span class="token punctuation">.</span>Node</span><span class="token operator">&lt;</span>K<span class="token punctuation">,</span>V<span class="token operator">></span> <span class="token punctuation">{</span>
+  Entry<span class="token operator">&lt;</span>K<span class="token punctuation">,</span>V<span class="token operator">></span> before<span class="token punctuation">,</span> after<span class="token punctuation">;</span>
+  <span class="token function">Entry</span><span class="token punctuation">(</span><span class="token keyword">int</span> hash<span class="token punctuation">,</span> K key<span class="token punctuation">,</span> V value<span class="token punctuation">,</span> Node<span class="token operator">&lt;</span>K<span class="token punctuation">,</span>V<span class="token operator">></span> next<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>hash<span class="token punctuation">,</span> key<span class="token punctuation">,</span> value<span class="token punctuation">,</span> next<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<blockquote>
+<p>TreeMap实现有序</p>
+</blockquote>
+<p><strong><font color='red'>TreeMap是按照Key的自然顺序或者Comprator的顺序进行排序</font></strong>，内部是通过红黑树来实现。</p>
+<ul>
+<li>TreeMap实现了SortedMap接口，它是一个key有序的Map类</li>
+<li>要么<font color='red'>key所属的类实现Comparable接口</font>，或者是<font color='red'>自定义一个实现了Comparator接口的比较器，传给TreeMap</font>用于key的比较。</li>
+</ul>
+<pre class=" language-java"><code class="language-java">TreeMap<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> String<span class="token operator">></span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TreeMap</span><span class="token operator">&lt;</span>String<span class="token punctuation">,</span> String<span class="token operator">></span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Comparator</span><span class="token operator">&lt;</span>String<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">compare</span><span class="token punctuation">(</span>String o1<span class="token punctuation">,</span> String o2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> o2<span class="token punctuation">.</span><span class="token function">compareTo</span><span class="token punctuation">(</span>o1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h3 id="3-2-链表红黑树如何互相转换？阈值多少？"><a href="#3-2-链表红黑树如何互相转换？阈值多少？" class="headerlink" title="3.2 链表红黑树如何互相转换？阈值多少？"></a>3.2 链表红黑树如何互相转换？阈值多少？</h3><ol>
+<li><p><strong><font color='red'>链表转红黑树的阈值为：8</font></strong></p>
+<p>经过计算，在hash函数设计合理的情况下，发生hash碰撞8次的几率为百万分之6，从概率上讲，阈值为8足够用</p>
+</li>
+<li><p><strong><font color='red'>红黑树转链表的阈值为：6</font></strong></p>
+<p>因为<font color='red'>如果hash碰撞次数在8附近徘徊，可能会频繁发生链表和红黑树的互相转化操作</font>，为了预防这种情况的发生。</p>
+</li>
+</ol>
 
             </div>
             <hr/>
@@ -1258,16 +1314,10 @@
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">
-参考资料：
-
-代理模式的使用总结
-
-
-1 代理模式代理模式是Java的常用设计模式。它的要素有如下要求：
+                    <div class="summary">1 代理模式代理模式是Java的常用设计模式。它的要素有如下要求：
 
 公共接口：代理类和委托类（被代理类）要有相同的接口；
-代理类增强服务：代理类主要负责为委托类（被代理类）预处理消息、过滤消息、把消</div>
+代理类增强服务：代理类主要负责为委托类（被代理类）预处理消息、过滤消息、把消息转发给委托类（被代理类），以及事后处理</div>
                     <div class="publish-info">
                         <span class="publish-date">
                             <i class="fa fa-clock-o fa-fw icon-date"></i>2021-06-20
@@ -1291,12 +1341,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%9D%A2%E8%AF%95/" target="_blank">
-                        <span class="chip bg-color">面试</span>
-                    </a>
-                    
                     <a href="/tags/Java/" target="_blank">
                         <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%9D%A2%E8%AF%95/" target="_blank">
+                        <span class="chip bg-color">面试</span>
                     </a>
                     
                     <a href="/tags/JDK%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86%E5%92%8CCGLIB%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/" target="_blank">
@@ -1365,12 +1415,12 @@ java.util工具包。
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%9D%A2%E8%AF%95/" target="_blank">
-                        <span class="chip bg-color">面试</span>
-                    </a>
-                    
                     <a href="/tags/Java/" target="_blank">
                         <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%9D%A2%E8%AF%95/" target="_blank">
+                        <span class="chip bg-color">面试</span>
                     </a>
                     
                     <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8BJUC/" target="_blank">
